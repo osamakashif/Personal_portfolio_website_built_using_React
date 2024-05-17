@@ -1,20 +1,18 @@
 import "./AboutMe.css";
 import profilePicture from "../../assets/images/profile_picture.jpg";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const AboutMe = () => {
   const [writtenStatement, setWrittenStatement] = useState<boolean>(false);
   const [statementIndex, setStatementIndex] = useState<number>(0);
   const greeting: string = "Hi,";
-  const statements: string[] = useMemo(() => {
-    return [
-      "I'm Osama.",
-      "I'm an Engineer.",
-      "I'm a Developer.",
-      "I'm a Researcher.",
-      "I'm Osama.",
-    ];
-  }, []);
+  const statements: string[] = [
+    "I'm Osama.",
+    "I'm an Engineer.",
+    "I'm a Developer.",
+    "I'm a Researcher.",
+    "I'm Osama.",
+  ];
 
   const useTypeText = () => {
     const [typedText, setTypedText] = useState<string>("");

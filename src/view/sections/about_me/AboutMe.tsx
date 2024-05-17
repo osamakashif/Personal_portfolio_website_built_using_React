@@ -5,19 +5,20 @@ import { useEffect, useMemo, useState } from "react";
 export const AboutMe = () => {
   const [writtenStatement, setWrittenStatement] = useState<boolean>(false);
   const [statementIndex, setStatementIndex] = useState<number>(1);
-  const greeting: string = "Hi, ";
+  const greeting: string = "Hi,";
   const statements: string[] = useMemo(() => {
     return [
-      "I'm Osama",
-      "I'm an Engineer",
-      "I'm a Developer",
-      "I'm a Researcher",
-      "I'm Osama",
+      "I'm Osama.",
+      "I'm an Engineer.",
+      "I'm a Developer.",
+      "I'm a Researcher.",
+      "I'm Osama.",
     ];
   }, []);
 
   const useTypeText = () => {
     const [typedText, setTypedText] = useState<string>("");
+    const [delayDuration, setDelayDuration] = useState<number>(100); // In milliseconds.
     useEffect(() => {
       if (statementIndex !== statements.length || !writtenStatement) {
         const timeout = setTimeout(() => {
@@ -27,9 +28,11 @@ export const AboutMe = () => {
             setTypedText(typedText + toWrite.charAt(writtenCharacters));
             if (typedText.length === toWrite.length) {
               setWrittenStatement(true);
+              setDelayDuration(1000);
             }
           }
           if (statementIndex !== statements.length && writtenStatement) {
+            setDelayDuration(100);
             setTypedText(typedText.substring(0, typedText.length - 1));
             if (typedText.length === 0) {
               if (statementIndex < statements.length) {
@@ -38,12 +41,18 @@ export const AboutMe = () => {
               setWrittenStatement(false);
             }
           }
-        }, 100);
+        }, delayDuration);
         return () => {
           clearTimeout(timeout);
         };
       }
-    }, [statementIndex, statements, typedText, writtenStatement]);
+    }, [
+      statementIndex,
+      statements,
+      typedText,
+      writtenStatement,
+      delayDuration,
+    ]);
     return typedText;
   };
 

@@ -6,6 +6,8 @@ export const AboutMe = () => {
   const [writtenStatement, setWrittenStatement] = useState<boolean>(false);
   const [statementIndex, setStatementIndex] = useState<number>(0);
   const greeting: string = "Hi,";
+  const typingDuration: number = 75;
+  const typingPauseDuration: number = 500;
   const statements: string[] = [
     "I'm Osama.",
     "I'm an Engineer.",
@@ -16,7 +18,7 @@ export const AboutMe = () => {
 
   const useTypeText = () => {
     const [typedText, setTypedText] = useState<string>("");
-    const [delayDuration, setDelayDuration] = useState<number>(100); // In milliseconds.
+    const [delayDuration, setDelayDuration] = useState<number>(typingDuration); // In milliseconds.
     useEffect(() => {
       if (statementIndex !== statements.length - 1 || !writtenStatement) {
         const timeout = setTimeout(() => {
@@ -26,11 +28,11 @@ export const AboutMe = () => {
             setTypedText(typedText + toWrite.charAt(writtenCharacters));
             if (typedText.length === toWrite.length) {
               setWrittenStatement(true);
-              setDelayDuration(1000);
+              setDelayDuration(typingPauseDuration);
             }
           }
           if (statementIndex !== statements.length - 1 && writtenStatement) {
-            setDelayDuration(100);
+            setDelayDuration(typingDuration);
             setTypedText(typedText.substring(0, typedText.length - 1));
             if (
               typedText.length === 0 ||

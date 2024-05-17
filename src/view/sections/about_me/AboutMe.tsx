@@ -34,15 +34,13 @@ export const AboutMe = () => {
           if (statementIndex !== statements.length - 1 && writtenStatement) {
             setDelayDuration(100);
             setTypedText(typedText.substring(0, typedText.length - 1));
-            if (statementIndex < statements.length - 1) {
-              if (
-                typedText.length === 0 ||
-                typedText ===
-                  statements[statementIndex + 1].substring(0, typedText.length)
-              ) {
-                setStatementIndex(statementIndex + 1);
-                setWrittenStatement(false);
-              }
+            if (
+              typedText.length === 0 ||
+              typedText ===
+                statements[statementIndex + 1].substring(0, typedText.length)
+            ) {
+              setStatementIndex(statementIndex + 1);
+              setWrittenStatement(false);
             }
           }
         }, delayDuration);

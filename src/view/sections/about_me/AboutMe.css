@@ -1,0 +1,19 @@
+#about_me {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.about_me_block {
+  display: flex;
+  align-items: center;
+}
+
+.display-image {
+  max-width: 320px;
+  max-height: 180px;
+  border-radius: 100%;
+  width: auto;
+  height: auto;
+  margin: 3%;
+  border: 5px solid #ffffff;
+}

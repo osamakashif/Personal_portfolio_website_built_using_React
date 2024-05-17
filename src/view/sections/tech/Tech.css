@@ -1,0 +1,8 @@
+.tech-links {
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.tech-links:hover {
+    text-decoration: underline;
+}

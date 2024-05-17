@@ -10,8 +10,8 @@ export const AboutMe = () => {
   const typingPauseDuration: number = 500;
   const statements: string[] = [
     "I'm Osama.",
-    "I'm an Engineer.",
-    "I'm a Developer.",
+    "I'm a Software Engineer.",
+    "I'm a Software Developer.",
     "I'm a Researcher.",
     "I'm Osama.",
   ];

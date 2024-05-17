@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 
 export const AboutMe = () => {
   const [writtenStatement, setWrittenStatement] = useState<boolean>(false);
-  const [statementIndex, setStatementIndex] = useState<number>(1);
+  const [statementIndex, setStatementIndex] = useState<number>(0);
   const greeting: string = "Hi,";
   const statements: string[] = useMemo(() => {
     return [
@@ -20,9 +20,9 @@ export const AboutMe = () => {
     const [typedText, setTypedText] = useState<string>("");
     const [delayDuration, setDelayDuration] = useState<number>(100); // In milliseconds.
     useEffect(() => {
-      if (statementIndex !== statements.length || !writtenStatement) {
+      if (statementIndex !== statements.length - 1 || !writtenStatement) {
         const timeout = setTimeout(() => {
-          const toWrite: string = statements[statementIndex - 1];
+          const toWrite: string = statements[statementIndex];
           const writtenCharacters = typedText.length;
           if (!writtenStatement) {
             setTypedText(typedText + toWrite.charAt(writtenCharacters));
@@ -31,14 +31,18 @@ export const AboutMe = () => {
               setDelayDuration(1000);
             }
           }
-          if (statementIndex !== statements.length && writtenStatement) {
+          if (statementIndex !== statements.length - 1 && writtenStatement) {
             setDelayDuration(100);
             setTypedText(typedText.substring(0, typedText.length - 1));
-            if (typedText.length === 0) {
-              if (statementIndex < statements.length) {
+            if (statementIndex < statements.length - 1) {
+              if (
+                typedText.length === 0 ||
+                typedText ===
+                  statements[statementIndex + 1].substring(0, typedText.length)
+              ) {
                 setStatementIndex(statementIndex + 1);
+                setWrittenStatement(false);
               }
-              setWrittenStatement(false);
             }
           }
         }, delayDuration);

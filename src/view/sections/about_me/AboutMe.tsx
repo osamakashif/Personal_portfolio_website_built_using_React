@@ -48,13 +48,7 @@ export const AboutMe = () => {
           clearTimeout(timeout);
         };
       }
-    }, [
-      statementIndex,
-      statements,
-      typedText,
-      writtenStatement,
-      delayDuration,
-    ]);
+    }, [typedText, delayDuration]);
     return typedText;
   };
 

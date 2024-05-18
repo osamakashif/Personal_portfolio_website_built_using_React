@@ -8,6 +8,21 @@ export const Projects = () => {
   const [sortByLanguage, setSortByLanguage] = useState<boolean>(false);
   const [languages, setLanguages] = useState<string[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
+
+  const displayProjects = (projects: Project[]): JSX.Element[] => {
+    return projects.map((project) => {
+      return (
+        <div key={project.name}>
+          <a href={project.link} target="_blank" rel="noopener noreferrer">
+            {project.name}
+          </a>
+          <p>{project.mainLanguage}</p>
+          <p>{project.description}</p>
+        </div>
+      );
+    });
+  };
+
   useEffect(() => {
     const getGitHubReposWithFetch = async () => {
       const response = await fetch(gitHubRepos);
@@ -46,23 +61,7 @@ export const Projects = () => {
         ></input>
       </div>
       <div>
-        {projects &&
-          !sortByLanguage &&
-          projects.map((project, index) => {
-            return (
-              <div key={index}>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {project.name}
-                </a>
-                <p>{project.mainLanguage}</p>
-                <p>{project.description}</p>
-              </div>
-            );
-          })}
+        {projects && !sortByLanguage && displayProjects(projects)}
         {projects &&
           sortByLanguage &&
           languages.map((language) => {

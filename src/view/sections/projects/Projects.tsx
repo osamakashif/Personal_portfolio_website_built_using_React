@@ -34,11 +34,15 @@ export const Projects = () => {
     );
   };
 
+  const displayLanguageTitle = (language: string | null): JSX.Element => {
+    return <h2>{language === null ? "Other" : language}</h2>;
+  };
+
   const displayLanguageSortedBlocks = (): JSX.Element[] => {
-    return languages.map((language) => {
+    return languages.sort().map((language) => {
       return (
         <div key={language}>
-          <h2>{language}</h2>
+          {displayLanguageTitle(language)}
           {projects
             .filter((project) => {
               return project.mainLanguage === language;

@@ -84,7 +84,7 @@ export const Projects = () => {
         <input
           type="checkbox"
           checked={sortByLanguage}
-          onClick={() => {
+          onChange={() => {
             setSortByLanguage(!sortByLanguage);
           }}
         ></input>

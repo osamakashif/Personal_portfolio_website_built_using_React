@@ -1,0 +1,20 @@
+.sorting-option-container {
+  display: flex;
+  align-items: center;
+}
+
+.rounded-checkbox {
+  width: 1.25em;
+  height: 1.25em;
+  border-radius: 50%;
+  border: 1px solid black;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.rounded-checkbox:checked {
+  appearance: auto;
+  clip-path: circle(45% at 50% 50%);
+  accent-color: purple;
+}

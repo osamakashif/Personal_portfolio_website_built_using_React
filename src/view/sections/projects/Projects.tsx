@@ -83,10 +83,11 @@ export const Projects = () => {
   return (
     <div id="projects">
       <h1>Projects</h1>
-      <div>
+      <div className="sorting-option-container">
         <p>Sort by programming language</p>
         <input
           type="checkbox"
+          className="rounded-checkbox"
           checked={sortByLanguage}
           onChange={() => {
             setSortByLanguage(!sortByLanguage);

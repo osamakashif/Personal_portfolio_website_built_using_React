@@ -18,3 +18,38 @@
   clip-path: circle(45% at 50% 50%);
   accent-color: purple;
 }
+
+.card-container {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px var(--dark-colour);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.language-card {
+  border: solid 1px var(--dark-colour);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+
+.language-title {
+  margin: 0;
+  padding-left: 10px;
+}
+
+@media only screen and (min-width: 855px) {
+  .project-card {
+    min-width: 300px;
+    max-width: 300px;
+  }
+}

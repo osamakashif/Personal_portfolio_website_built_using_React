@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import "./Projects.css";
 import { Project } from "../../../model/projects/Project";
 
@@ -9,23 +9,27 @@ export const Projects = () => {
   const [languages, setLanguages] = useState<string[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
 
-  const displayAllProjects = (): JSX.Element[] => {
-    return projects.map((project) => {
-      return (
-        <div key={project.name}>
-          <a href={project.link} target="_blank" rel="noopener noreferrer">
-            {project.name}
-          </a>
-          <p>{project.mainLanguage}</p>
-          <p>{project.description}</p>
-        </div>
-      );
-    });
+  const displayAllProjects = (): ReactElement<any, any> => {
+    return (
+      <div className="card-container">
+        {projects.map((project) => {
+          return (
+            <div key={project.name} className="project-card">
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                {project.name}
+              </a>
+              <p>{project.mainLanguage}</p>
+              <p>{project.description}</p>
+            </div>
+          );
+        })}
+      </div>
+    );
   };
 
   const displayLanguageSortedProject = (project: Project): JSX.Element => {
     return (
-      <div key={project.name}>
+      <div key={project.name} className="project-card">
         <a href={project.link} target="_blank" rel="noopener noreferrer">
           {project.name}
         </a>
@@ -35,21 +39,27 @@ export const Projects = () => {
   };
 
   const displayLanguageTitle = (language: string | null): JSX.Element => {
-    return <h2>{language === null ? "Other" : language}</h2>;
+    return (
+      <h2 className="language-title">
+        {language === null ? "Other" : language}
+      </h2>
+    );
   };
 
   const displayLanguageSortedBlocks = (): JSX.Element[] => {
     return languages.sort().map((language) => {
       return (
-        <div key={language}>
+        <div key={language} className="language-card">
           {displayLanguageTitle(language)}
-          {projects
-            .filter((project) => {
-              return project.mainLanguage === language;
-            })
-            .map((project) => {
-              return displayLanguageSortedProject(project);
-            })}
+          <div className="card-container">
+            {projects
+              .filter((project) => {
+                return project.mainLanguage === language;
+              })
+              .map((project) => {
+                return displayLanguageSortedProject(project);
+              })}
+          </div>
         </div>
       );
     });

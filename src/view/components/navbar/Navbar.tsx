@@ -9,7 +9,7 @@ export const Navbar = () => {
   pages.push(new Page("Technological", "#tech"));
 
   return (
-    <nav>
+    <nav className="navbar">
       <ul className="nav-list">
         {pages.map((page) => {
           return (

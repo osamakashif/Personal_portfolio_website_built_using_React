@@ -2,6 +2,7 @@
   /* Colour definitions */
   --dark-colour: #171717;
   --light-colour: #ffffff;
+  --background-colour: var(--light-colour);
 }
 
 body {

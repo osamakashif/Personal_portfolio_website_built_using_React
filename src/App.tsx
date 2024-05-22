@@ -1,14 +1,19 @@
-import React from 'react';
-import './App.css';
+import { Navbar } from "./view/components/navbar/Navbar";
+import { AboutMe } from "./view/sections/about_me/AboutMe";
+import { Projects } from "./view/sections/projects/Projects";
+import { Tech } from "./view/sections/tech/Tech";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        <p>
-          Osama Kashif
-        </p>
+        <Navbar />
       </header>
+      <div className="content">
+        <AboutMe />
+        <Projects />
+        <Tech />
+      </div>
     </div>
   );
 }

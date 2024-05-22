@@ -81,7 +81,7 @@ export const Projects = () => {
   }, []);
 
   return (
-    <div id="projects">
+    <div id="projects" className="section-content">
       <h1>Projects</h1>
       <div className="sorting-option-container">
         <p>Sort by programming language</p>

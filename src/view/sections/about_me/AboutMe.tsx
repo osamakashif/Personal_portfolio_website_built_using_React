@@ -53,7 +53,7 @@ export const AboutMe = () => {
   };
 
   return (
-    <div id="about_me">
+    <div id="about_me" className="section-content">
       <h1>About Me</h1>
       <div className="about_me_block">
         <img
@@ -72,8 +72,28 @@ export const AboutMe = () => {
         and academic experience with various topics including Web Development,
         Robotics, and Artificial Intelligence (AI).
       </p>
-      <p>You can see some of my projects on <a href="https://github.com/osamakashif" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-      <p>You can connect with me on <a href="https://www.linkedin.com/in/osamakashif" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+      <p>
+        You can see some of my projects on{" "}
+        <a
+          href="https://github.com/osamakashif"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        .
+      </p>
+      <p>
+        You can connect with me on{" "}
+        <a
+          href="https://www.linkedin.com/in/osamakashif"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+        .
+      </p>
     </div>
   );
 };

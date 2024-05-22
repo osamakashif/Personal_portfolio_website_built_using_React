@@ -13,3 +13,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
 }
+
+.content {
+  padding-top: 100px;
+}
+
+.section-content {
+  padding-left: 10%;
+  padding-right: 10%;
+}

@@ -40,7 +40,7 @@ export const Tech = () => {
     },
     {
       name: "HTML",
-      website: "https://en.wikipedia.org/wiki/C_(programming_language)",
+      website: "https://en.wikipedia.org/wiki/HTML",
     },
     {
       name: "CSS",
@@ -85,7 +85,7 @@ export const Tech = () => {
   ];
 
   return (
-    <div id="tech">
+    <div id="tech" className="section-content">
       <h1>Technological Experience</h1>
       <div>
         {technologies &&

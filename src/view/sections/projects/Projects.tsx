@@ -11,7 +11,7 @@ export const Projects = () => {
 
   const displayAllProjects = (): ReactElement<any, any> => {
     return (
-      <div className="card-container">
+      <div className="card-container center-aligned-card">
         {projects.map((project) => {
           return (
             <div key={project.name} className="project-card">
@@ -46,23 +46,27 @@ export const Projects = () => {
     );
   };
 
-  const displayLanguageSortedBlocks = (): JSX.Element[] => {
-    return languages.sort().map((language) => {
-      return (
-        <div key={language} className="language-card">
-          {displayLanguageTitle(language)}
-          <div className="card-container">
-            {projects
-              .filter((project) => {
-                return project.mainLanguage === language;
-              })
-              .map((project) => {
-                return displayLanguageSortedProject(project);
-              })}
-          </div>
-        </div>
-      );
-    });
+  const displayLanguageSortedBlocks = (): ReactElement<any, any> => {
+    return (
+      <div className="centered-flex-column">
+        {languages.sort().map((language) => {
+          return (
+            <div key={language} className="language-card">
+              {displayLanguageTitle(language)}
+              <div className="card-container">
+                {projects
+                  .filter((project) => {
+                    return project.mainLanguage === language;
+                  })
+                  .map((project) => {
+                    return displayLanguageSortedProject(project);
+                  })}
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
   };
 
   useEffect(() => {

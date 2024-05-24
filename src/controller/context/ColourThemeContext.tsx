@@ -31,13 +31,15 @@ export function ColourThemeContextProvider({ children }: { children: any }) {
     ) {
       setTheme(stored_value);
     } else {
-      setTheme("auto");
+      setTheme(theme);
     }
     setFirstLoad(false);
-  }, []);
+  }, [theme]);
 
   const switchTheme = useCallback((newTheme: "auto" | "light" | "dark") => {
-    setTheme(newTheme);
+    if (newTheme === "auto" || newTheme === "light" || newTheme === "dark") {
+      setTheme(newTheme);
+    }
   }, []);
 
   const colourThemeContext = useMemo(

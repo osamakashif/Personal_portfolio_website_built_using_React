@@ -2,7 +2,6 @@
   /* Colour definitions */
   --dark-colour: #171717;
   --light-colour: #ffffff;
-  --background-colour: var(--light-colour);
 }
 
 body {
@@ -15,11 +14,23 @@ body {
   min-height: 100vh;
 }
 
-.content {
-  padding-top: 100px;
-}
-
 .section-content {
   padding-left: 10%;
   padding-right: 10%;
+  padding-top: 50px;
+}
+
+.dark {
+  --background-colour: var(--dark-colour);
+  --text-colour: var(--light-colour);
+}
+
+.light {
+  --background-colour: var(--light-colour);
+  --text-colour: var(--dark-colour);
+}
+
+.application {
+  background-color: var(--background-colour);
+  color: var(--text-colour);
 }

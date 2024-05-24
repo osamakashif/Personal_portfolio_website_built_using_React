@@ -27,7 +27,7 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  border: solid 1px var(--dark-colour);
+  border: solid 1px var(--primary-colour);
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
@@ -35,7 +35,7 @@
 }
 
 .language-card {
-  border: solid 1px var(--dark-colour);
+  border: solid 1px var(--primary-colour);
   margin: 10px;
   padding: 10px;
   border-radius: 20px;

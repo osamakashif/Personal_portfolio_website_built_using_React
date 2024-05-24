@@ -15,12 +15,14 @@ export const Navbar = () => {
         {pages.map((page) => {
           return (
             <li key={page.name}>
-              <a className="nav-link" href={page.link}>{page.name}</a>
+              <a className="nav-link" href={page.link}>
+                {page.name}
+              </a>
             </li>
           );
         })}
-        <SettingsDrawer />
       </ul>
+      <SettingsDrawer />
     </nav>
   );
 };

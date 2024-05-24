@@ -1,20 +1,20 @@
 .settings-button {
   background-color: var(--background-colour);
   border: none;
+  padding-right: 20px;
 }
 
 .settings-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: solid 1px var(--primary-colour);
-  margin-top: 1em;
   margin-bottom: 1em;
-  padding-bottom: 1em;
   align-items: center;
 }
 
 .settings-title {
-  margin: 0;
+  text-transform: uppercase;
+  padding-left: 20px;
 }
 
 .settings-background {

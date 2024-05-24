@@ -1,4 +1,4 @@
-export const SunIcon = ({ className = "" }: { className?: string }) => {
+export const SunIcon = ({ className = "icon-fill icon-padding" }: { className?: string }) => {
   return (
     // Original SVG Source: https://www.iconarchive.com/show/octicons-icons-by-github/sun-24-icon.html
     // Original SVG Designer: GitHub.

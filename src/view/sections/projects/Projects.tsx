@@ -3,7 +3,7 @@ import "./Projects.css";
 import { Project } from "../../../model/projects/Project";
 
 export const Projects = () => {
-  const gitHubRepos = "https://api.github.com/users/osamakashif/repos";
+  const gitHubRepos: string = "https://api.github.com/users/osamakashif/repos";
 
   const [sortByLanguage, setSortByLanguage] = useState<boolean>(true);
   const [languages, setLanguages] = useState<string[]>([]);
@@ -67,7 +67,11 @@ export const Projects = () => {
 
   useEffect(() => {
     const getGitHubReposWithFetch = async () => {
-      const response = await fetch(gitHubRepos);
+      const response = await fetch(gitHubRepos, {
+        headers: {
+          "User-Agent": "request",
+        },
+      });
       const jsonData = await response.json();
       let newProjects: Project[] = [];
       let newLanguages: string[] = [];

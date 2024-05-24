@@ -1,0 +1,31 @@
+.themes {
+  border: solid 1px var(--primary-colour);
+  border-radius: 50px;
+  display: flex;
+}
+
+.theme-button {
+  border: solid 1px var(--primary-colour);
+  border-radius: 50px;
+  margin: 10px;
+  background-color: var(--background-colour);
+  color: var(--primary-colour);
+  display: flex;
+  align-items: center;
+}
+
+.icon-fill {
+  fill: var(--primary-colour);
+}
+
+.icon-background-fill {
+  fill: var(--background-colour);
+}
+
+.icon-stroke {
+  stroke: var(--primary-colour);
+}
+
+.icon-padding {
+  padding: 5px;
+}

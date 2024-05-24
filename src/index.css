@@ -17,7 +17,7 @@ body {
 .section-content {
   padding-left: 10%;
   padding-right: 10%;
-  padding-top: 50px;
+  padding-top: 70px;
 }
 
 .dark {
@@ -47,4 +47,19 @@ body {
 .application {
   background-color: var(--background-colour);
   color: var(--primary-colour);
+}
+
+.icon-fill {
+  fill: var(--primary-colour);
+}
+
+.icon-background-fill {
+  fill: transparent;
+}
+
+.icon-stroke {
+  stroke: var(--primary-colour);
+}
+.icon-padding {
+  padding: 5px;
 }

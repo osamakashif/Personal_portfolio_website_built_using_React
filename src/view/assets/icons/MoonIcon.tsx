@@ -1,4 +1,4 @@
-export const MoonIcon = ({ className = "" }: { className?: string }) => {
+export const MoonIcon = ({ className = "icon-stroke icon-background-fill icon-padding" }: { className?: string }) => {
   return (
     // Original SVG Source: https://www.svgrepo.com/svg/471719/moon-02
     // Original SVG Authour: Jordan Hughes.

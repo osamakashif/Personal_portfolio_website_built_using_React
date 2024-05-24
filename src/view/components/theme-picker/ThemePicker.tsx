@@ -9,9 +9,9 @@ export const ThemePicker = () => {
     const {switchTheme} = useContext(ColourThemeContext)
   return (
     <div className="themes">
-      <button className="theme-button" onClick={() => {switchTheme("auto")}}><SunMoonIcon className="icon-stroke icon-background-fill icon-padding"/>Auto</button>
-      <button className="theme-button" onClick={() => {switchTheme("light")}}><SunIcon className="icon-fill icon-padding" />Light</button>
-      <button className="theme-button" onClick={() => {switchTheme("dark")}}><MoonIcon className="icon-stroke icon-background-fill icon-padding" />Dark</button>
+      <button className="theme-button" onClick={() => {switchTheme("auto")}}><SunMoonIcon />Auto</button>
+      <button className="theme-button" onClick={() => {switchTheme("light")}}><SunIcon />Light</button>
+      <button className="theme-button" onClick={() => {switchTheme("dark")}}><MoonIcon />Dark</button>
     </div>
   );
 };

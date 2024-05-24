@@ -1,0 +1,52 @@
+.settings-button {
+  background-color: var(--background-colour);
+  border: none;
+}
+
+.settings-header {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid 1px var(--primary-colour);
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  align-items: center;
+}
+
+.settings-title {
+  margin: 0;
+}
+
+.settings-background {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgba(var(--hover-background-rgb), 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.settings-container {
+  z-index: 3;
+  background-color: var(--background-colour);
+  position: fixed;
+  right: 0;
+  height: 100%;
+  border-left: solid 1px var(--primary-colour);
+  box-shadow: 0 4px 4px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-options-container {
+  margin: 1em;
+}
+
+.visible {
+  display: block;
+}
+
+.invisible {
+  display: none;
+}

@@ -2,6 +2,7 @@
   /* Colour definitions */
   --dark-colour: #171717;
   --light-colour: #ffffff;
+  --hover-background-rgb: 69, 69, 69;
 }
 
 body {
@@ -62,4 +63,34 @@ body {
 }
 .icon-padding {
   padding: 5px;
+}
+
+@keyframes from-right-slide-in-animation {
+  from {
+    right: -300px;
+    opacity: 0;
+  }
+  to {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.from-right-slide-in-animation {
+  animation: from-right-slide-in-animation 0.3s ease;
+}
+
+@keyframes to-right-slide-out-animation {
+  from {
+    right: 0;
+    opacity: 1;
+  }
+  to {
+    right: -300px;
+    opacity: 0;
+  }
+}
+
+.to-right-slide-out-animation {
+  animation: to-right-slide-out-animation 0.3s ease;
 }

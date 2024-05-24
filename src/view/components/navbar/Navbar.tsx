@@ -1,4 +1,5 @@
 import { Page } from "../../../model/pages/Page";
+import { SettingsDrawer } from "../settings-dropdown/SettingsDrawer";
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -18,6 +19,7 @@ export const Navbar = () => {
             </li>
           );
         })}
+        <SettingsDrawer />
       </ul>
     </nav>
   );

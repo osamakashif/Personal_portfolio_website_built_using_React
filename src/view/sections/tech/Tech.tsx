@@ -95,7 +95,7 @@ export const Tech = () => {
               href={tech.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="tech-links"
+              className="tech-links new-page-link"
             >
               {tech.name}
             </a>

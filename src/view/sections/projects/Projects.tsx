@@ -15,7 +15,7 @@ export const Projects = () => {
         {projects.map((project) => {
           return (
             <div key={project.name} className="project-card">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <a className="new-page-link" href={project.link} target="_blank" rel="noopener noreferrer">
                 {project.name}
               </a>
               <p>{project.mainLanguage}</p>
@@ -30,7 +30,7 @@ export const Projects = () => {
   const displayLanguageSortedProject = (project: Project): JSX.Element => {
     return (
       <div key={project.name} className="project-card">
-        <a href={project.link} target="_blank" rel="noopener noreferrer">
+        <a className="new-page-link" href={project.link} target="_blank" rel="noopener noreferrer">
           {project.name}
         </a>
         <p>{project.description}</p>

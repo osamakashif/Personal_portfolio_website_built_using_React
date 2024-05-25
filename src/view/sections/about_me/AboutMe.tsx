@@ -78,6 +78,7 @@ export const AboutMe = () => {
           href="https://github.com/osamakashif"
           target="_blank"
           rel="noopener noreferrer"
+          className="new-page-link"
         >
           GitHub
         </a>
@@ -89,6 +90,7 @@ export const AboutMe = () => {
           href="https://www.linkedin.com/in/osamakashif"
           target="_blank"
           rel="noopener noreferrer"
+          className="new-page-link"
         >
           LinkedIn
         </a>

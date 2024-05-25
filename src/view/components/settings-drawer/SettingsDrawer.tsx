@@ -7,6 +7,7 @@ import { CloseIcon } from "../../assets/icons/CloseIcon";
 export const SettingsDrawer = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [closing, setClosing] = useState<boolean>(false);
+  const [iconFilled, setIconFilled] = useState<boolean>(false);
 
   const closeMenu = () => {
     setClosing(true);
@@ -23,8 +24,15 @@ export const SettingsDrawer = () => {
         onClick={() => {
           setMenuOpen(true);
         }}
+        onMouseEnter={() => {
+          setIconFilled(true);
+        }}
+        onMouseLeave={() => {
+          setIconFilled(false);
+        }}
       >
-        <SettingsIcon />
+        {!iconFilled && <SettingsIcon />}
+        {iconFilled && <SettingsIcon className="icon-fill" />}
       </button>
       <div
         className={

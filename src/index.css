@@ -72,10 +72,6 @@ body {
   fill: var(--primary-colour);
 }
 
-.icon-hover-fill:hover {
-  fill: var(--primary-colour);
-}
-
 .icon-background-fill {
   fill: transparent;
 }

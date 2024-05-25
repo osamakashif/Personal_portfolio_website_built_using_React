@@ -82,7 +82,7 @@ export const Projects = () => {
       Array.from(jsonData).forEach((data: any) => {
         newProjects.push(
           new Project(
-            (data.name as string).replace("_", " "),
+            (data.name as string).replaceAll("_", " "),
             data.html_url,
             data.language,
             data.description

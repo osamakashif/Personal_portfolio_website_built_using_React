@@ -12,3 +12,8 @@
   margin: 3%;
   border: 5px solid #ffffff;
 }
+
+.link-icon {
+  fill: var(--link-colour);
+  padding-inline-start: 5px;
+}

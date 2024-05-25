@@ -1,6 +1,7 @@
 import "./AboutMe.css";
 import profilePicture from "../../assets/images/profile_picture.jpg";
 import { useEffect, useState } from "react";
+import { GitHubIcon } from "../../assets/icons/GitHubIcon";
 
 export const AboutMe = () => {
   const [writtenStatement, setWrittenStatement] = useState<boolean>(false);
@@ -81,6 +82,7 @@ export const AboutMe = () => {
           className="new-page-link"
         >
           GitHub
+          <GitHubIcon className="link-icon" />
         </a>
         .
       </p>

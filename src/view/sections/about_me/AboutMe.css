@@ -15,5 +15,8 @@
 
 .link-icon {
   fill: var(--link-colour);
+}
+
+.inline-icon-padding {
   padding-inline-start: 5px;
 }

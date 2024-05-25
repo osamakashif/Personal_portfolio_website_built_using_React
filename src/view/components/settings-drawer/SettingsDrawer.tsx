@@ -46,7 +46,7 @@ export const SettingsDrawer = () => {
           }
         >
           <div className="settings-header">
-            <p className="settings-title">Settings</p>
+            <p className="settings-title-padding settings-title-style">Settings</p>
             <button
               className="in-navbar-button"
               onClick={() => {
@@ -57,6 +57,7 @@ export const SettingsDrawer = () => {
             </button>
           </div>
           <div className="settings-options-container">
+            <p className="setting-name">Theme</p>
             <ThemePicker />
           </div>
         </div>

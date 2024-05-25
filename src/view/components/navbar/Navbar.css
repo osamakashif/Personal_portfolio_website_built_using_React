@@ -55,7 +55,6 @@
 
 .in-navbar-settings {
   padding-top: 20px;
-  border-top: solid 1px var(--primary-colour);
   margin-top: 20px;
 }
 
@@ -89,6 +88,19 @@
   padding-left: 20px;
   padding-top: 10px;
   text-transform: uppercase;
+}
+
+.setting-name {
+  margin-top: 0;
+}
+
+.settings-title-style {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.settings-title-border {
+  border-bottom: solid 1px var(--primary-colour);
 }
 
 @media only screen and (min-width: 550px) {

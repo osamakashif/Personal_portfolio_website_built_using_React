@@ -6,8 +6,7 @@
   align-items: center;
 }
 
-.settings-title {
-  text-transform: uppercase;
+.settings-title-padding {
   padding-left: 20px;
 }
 

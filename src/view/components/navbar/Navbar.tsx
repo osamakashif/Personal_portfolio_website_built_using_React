@@ -85,6 +85,8 @@ export const Navbar = () => {
             </ul>
             <div className="in-navbar-settings-container">
               <div className="in-navbar-settings">
+                <p className="settings-title-style settings-title-border">Settings</p>
+                <p className="setting-name">Theme</p>
                 <ThemePicker />
               </div>
             </div>

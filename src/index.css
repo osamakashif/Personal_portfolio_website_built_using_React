@@ -5,11 +5,9 @@
   --hover-background-rgb: 69, 69, 69;
   --light-blue-grey-colour: #f1f0fd;
   --light-pink-colour: #ffccfc;
-  /* --dark-purple-colour: #300c34; */
-  /* --dark-purple-colour: #380c34; */
+  --highlight-pink-colour: #f3a8ee;
   --dark-purple-colour: #51045a;
-  /* --dark-blue-colour: #0b0842; */
-  /* --dark-blue-colour: #100c84; */
+  --highlight-purple-colour: #760882;
   --dark-blue-colour: #250a40;
 }
 
@@ -34,6 +32,7 @@ body {
   --primary-colour: var(--light-colour);
   --secondary-background-colour: var(--dark-blue-colour);
   --tertiary-background-colour: var(--dark-purple-colour);
+  --highlight-colour: var(--highlight-purple-colour);
 }
 
 .light {
@@ -41,6 +40,7 @@ body {
   --primary-colour: var(--dark-colour);
   --secondary-background-colour: var(--light-blue-grey-colour);
   --tertiary-background-colour: var(--light-pink-colour);
+  --highlight-colour: var(--highlight-pink-colour);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -49,6 +49,7 @@ body {
     --primary-colour: var(--light-colour);
     --secondary-background-colour: var(--dark-blue-colour);
     --tertiary-background-colour: var(--dark-purple-colour);
+    --highlight-colour: var(--highlight-purple-colour);
   }
 }
 
@@ -58,6 +59,7 @@ body {
     --primary-colour: var(--dark-colour);
     --secondary-background-colour: var(--light-blue-grey-colour);
     --tertiary-background-colour: var(--light-pink-colour);
+    --highlight-colour: var(--highlight-pink-colour);
   }
 }
 

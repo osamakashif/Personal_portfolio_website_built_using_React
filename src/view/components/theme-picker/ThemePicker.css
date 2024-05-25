@@ -3,14 +3,25 @@
   border-radius: 50px;
   display: flex;
   width: fit-content;
+  background-color: var(--secondary-background-colour);
 }
 
 .theme-button {
   border: solid 1px var(--primary-colour);
   border-radius: 50px;
   margin: 10px;
-  background-color: var(--background-colour);
   color: var(--primary-colour);
   display: flex;
   align-items: center;
+  background-color: var(--tertiary-background-colour);
+}
+
+.theme-button:hover {
+  cursor: pointer;
+  background-color: var(--highlight-colour);
+  border-color: transparent;
+}
+
+.selected {
+  background-color: var(--highlight-colour);
 }

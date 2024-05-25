@@ -2,7 +2,7 @@ import "./Navbar.css";
 import { useState } from "react";
 import { Page } from "../../../model/pages/Page";
 import { MenuIcon } from "../../assets/icons/MenuIcon";
-import { SettingsDrawer } from "../settings-dropdown/SettingsDrawer";
+import { SettingsDrawer } from "../settings-drawer/SettingsDrawer";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 import { ThemePicker } from "../theme-picker/ThemePicker";
 

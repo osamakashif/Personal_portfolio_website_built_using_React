@@ -3,6 +3,14 @@
   --dark-colour: #171717;
   --light-colour: #ffffff;
   --hover-background-rgb: 69, 69, 69;
+  --light-blue-grey-colour: #f1f0fd;
+  --light-pink-colour: #ffccfc;
+  /* --dark-purple-colour: #300c34; */
+  /* --dark-purple-colour: #380c34; */
+  --dark-purple-colour: #51045a;
+  /* --dark-blue-colour: #0b0842; */
+  /* --dark-blue-colour: #100c84; */
+  --dark-blue-colour: #250a40;
 }
 
 body {
@@ -24,17 +32,23 @@ body {
 .dark {
   --background-colour: var(--dark-colour);
   --primary-colour: var(--light-colour);
+  --secondary-background-colour: var(--dark-blue-colour);
+  --tertiary-background-colour: var(--dark-purple-colour);
 }
 
 .light {
   --background-colour: var(--light-colour);
   --primary-colour: var(--dark-colour);
+  --secondary-background-colour: var(--light-blue-grey-colour);
+  --tertiary-background-colour: var(--light-pink-colour);
 }
 
 @media (prefers-color-scheme: dark) {
   .auto {
     --background-colour: var(--dark-colour);
     --primary-colour: var(--light-colour);
+    --secondary-background-colour: var(--dark-blue-colour);
+    --tertiary-background-colour: var(--dark-purple-colour);
   }
 }
 
@@ -42,6 +56,8 @@ body {
   .auto {
     --background-colour: var(--light-colour);
     --primary-colour: var(--dark-colour);
+    --secondary-background-colour: var(--light-blue-grey-colour);
+    --tertiary-background-colour: var(--light-pink-colour);
   }
 }
 

@@ -37,19 +37,19 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  border: solid 1px var(--primary-colour);
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
   width: 100%;
+  background-color: var(--tertiary-background-colour);
 }
 
 .language-card {
-  border: solid 1px var(--primary-colour);
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
   width: 100%;
+  background-color: var(--secondary-background-colour);
 }
 
 .language-title {

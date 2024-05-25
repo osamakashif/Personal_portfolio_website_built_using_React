@@ -1,9 +1,3 @@
-.settings-button {
-  background-color: var(--background-colour);
-  border: none;
-  padding-right: 20px;
-}
-
 .settings-header {
   display: flex;
   justify-content: space-between;

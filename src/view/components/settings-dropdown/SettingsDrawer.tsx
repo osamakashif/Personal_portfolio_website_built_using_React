@@ -19,7 +19,7 @@ export const SettingsDrawer = () => {
   return (
     <div>
       <button
-        className="settings-button"
+        className="in-navbar-button"
         onClick={() => {
           setMenuOpen(true);
         }}
@@ -40,7 +40,7 @@ export const SettingsDrawer = () => {
           <div className="settings-header">
             <p className="settings-title">Settings</p>
             <button
-              className="settings-button"
+              className="in-navbar-button"
               onClick={() => {
                 closeMenu();
               }}

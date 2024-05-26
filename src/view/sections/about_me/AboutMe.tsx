@@ -64,8 +64,8 @@ export const AboutMe = () => {
           alt="Osama Kashif"
         />
         <div>
-          <h1>{greeting}</h1>
-          <h1>{useTypeText()}</h1>
+          <h2>{greeting}</h2>
+          <h2>{useTypeText()}</h2>
         </div>
       </div>
       <p>

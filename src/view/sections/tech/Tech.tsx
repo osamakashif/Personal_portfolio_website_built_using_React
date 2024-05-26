@@ -1,98 +1,99 @@
+import { Page } from "../../../model/pages/Page";
 import "./Tech.css";
 
 export const Tech = () => {
-  const technologies = [
+  const technologies: Page[] = [
     {
       name: "Bash",
-      website: "https://en.wikipedia.org/wiki/Bash_(Unix_shell)",
+      link: "https://en.wikipedia.org/wiki/Bash_(Unix_shell)",
     },
     {
       name: "Batch",
-      website: "https://en.wikipedia.org/wiki/Batch_file",
+      link: "https://en.wikipedia.org/wiki/Batch_file",
     },
     {
       name: "C",
-      website: "https://en.wikipedia.org/wiki/C_(programming_language)",
+      link: "https://en.wikipedia.org/wiki/C_(programming_language)",
     },
     {
       name: "C++",
-      website: "https://en.wikipedia.org/wiki/C%2B%2B",
+      link: "https://en.wikipedia.org/wiki/C%2B%2B",
     },
     {
       name: "C#",
-      website: "https://docs.microsoft.com/en-us/dotnet/csharp/",
+      link: "https://docs.microsoft.com/en-us/dotnet/csharp/",
     },
     {
       name: "CMake",
-      website: "https://cmake.org/",
+      link: "https://cmake.org/",
     },
     {
       name: "WSL",
-      website: "https://docs.microsoft.com/en-us/windows/wsl/install-win10",
+      link: "https://docs.microsoft.com/en-us/windows/wsl/install-win10",
     },
     {
       name: "Virtual Box",
-      website: "https://www.virtualbox.org/",
+      link: "https://www.virtualbox.org/",
     },
     {
       name: "Java",
-      website: "https://www.java.com/en/",
+      link: "https://www.java.com/en/",
     },
     {
       name: "HTML",
-      website: "https://en.wikipedia.org/wiki/HTML",
+      link: "https://en.wikipedia.org/wiki/HTML",
     },
     {
       name: "CSS",
-      website: "https://en.wikipedia.org/wiki/CSS",
+      link: "https://en.wikipedia.org/wiki/CSS",
     },
     {
       name: "JavaScript",
-      website: "https://en.wikipedia.org/wiki/JavaScript",
+      link: "https://en.wikipedia.org/wiki/JavaScript",
     },
     {
       name: "ReactJS",
-      website: "https://reactjs.org/",
+      link: "https://reactjs.org/",
     },
     {
       name: "React Native",
-      website: "https://reactnative.dev/",
+      link: "https://reactnative.dev/",
     },
     {
       name: "SQL",
-      website: "https://en.wikipedia.org/wiki/SQL",
+      link: "https://en.wikipedia.org/wiki/SQL",
     },
     {
       name: "MATLAB",
-      website: "https://www.mathworks.com/products/matlab.html",
+      link: "https://www.mathworks.com/products/matlab.html",
     },
     {
       name: "R",
-      website: "https://www.r-project.org/",
+      link: "https://www.r-project.org/",
     },
     {
       name: "Python",
-      website: "https://www.python.org/",
+      link: "https://www.python.org/",
     },
     {
       name: "Git",
-      website: "https://git-scm.com/",
+      link: "https://git-scm.com/",
     },
     {
       name: "SVN",
-      website: "https://subversion.apache.org/",
+      link: "https://subversion.apache.org/",
     },
   ];
 
   return (
     <div id="tech" className="section-content">
       <h1>Technological Experience</h1>
-      <div>
+      <div className="tech-container">
         {technologies &&
           technologies.map((tech, index) => (
             <a
               key={index}
-              href={tech.website}
+              href={tech.link}
               target="_blank"
               rel="noopener noreferrer"
               className="tech-links new-page-link"

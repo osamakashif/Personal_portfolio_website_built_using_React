@@ -3,7 +3,7 @@ import { Navbar } from "./view/components/navbar/Navbar";
 import { AboutMe } from "./view/sections/about_me/AboutMe";
 import { Projects } from "./view/sections/projects/Projects";
 import { Tech } from "./view/sections/tech/Tech";
-import { ColourThemeContext } from "./controller/context/ColourThemeContext";
+import { ColourThemeContext } from "./controller/context/colour-theme-context/ColourThemeContext";
 
 function App() {
   const { theme } = useContext(ColourThemeContext);

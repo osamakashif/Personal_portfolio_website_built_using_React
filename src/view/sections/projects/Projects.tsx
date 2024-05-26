@@ -124,7 +124,7 @@ export const Projects = () => {
       {!loaded && (
         <div>
           <p>
-            In case the projects are not visible on this page. You can see some
+            In case the projects are not visible on this page, you can see some
             of my projects on{" "}
             <a
               href="https://github.com/osamakashif"

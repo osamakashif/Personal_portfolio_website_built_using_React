@@ -46,6 +46,7 @@ button {
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 70px;
+  min-height: 100vh;
 }
 
 .dark {

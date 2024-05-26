@@ -4,24 +4,25 @@
   display: flex;
   width: fit-content;
   background-color: var(--secondary-background-colour);
+  align-items: center;
 }
 
 .theme-button {
-  border: solid 1px var(--primary-colour);
+  border: none;
   border-radius: 50px;
   margin: 10px;
   color: var(--primary-colour);
   display: flex;
   align-items: center;
-  background-color: var(--tertiary-background-colour);
+  background-color: transparent;
 }
 
 .theme-button:hover {
   cursor: pointer;
   background-color: var(--highlight-colour);
-  border-color: transparent;
 }
 
 .selected {
-  background-color: var(--highlight-colour);
+  border: solid 1px transparent;
+  background-color: var(--tertiary-background-colour);
 }

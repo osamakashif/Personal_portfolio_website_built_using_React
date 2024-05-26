@@ -5,7 +5,7 @@ export const CloseIcon = ({ className = "icon-stroke" }: { className?: string })
         width="24"
         height="24"
         viewBox="0 0 24 24"
-        stroke-width="2"
+        strokeWidth="2"
         className={className}
       >
         <line x1="3" y1="3" x2="21" y2="21" />

@@ -5,8 +5,8 @@ export const TickIcon = ({ className = "icon-stroke" }: { className?: string }) 
         width="12"
         height="12"
         viewBox="0 0 24 24"
-        stroke-width="4"
-        stroke-linecap="round"
+        strokeWidth="4"
+        strokeLinecap="round"
         className={className}
       >
         <line x1="2" y1="12" x2="6" y2="18" />

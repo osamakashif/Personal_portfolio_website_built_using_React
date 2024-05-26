@@ -9,7 +9,7 @@ export const MenuIcon = ({
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      stroke-width="2"
+      strokeWidth="2"
       className={className}
     >
       <line x1="3" y1="6" x2="21" y2="6" />

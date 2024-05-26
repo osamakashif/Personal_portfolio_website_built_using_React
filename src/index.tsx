@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ColourThemeContextProvider } from './controller/context/ColourThemeContext';
+import { ColourThemeContextProvider } from './controller/context/colour-theme-context/ColourThemeContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

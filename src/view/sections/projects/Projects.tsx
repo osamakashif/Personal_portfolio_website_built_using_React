@@ -1,14 +1,30 @@
-import { ReactElement, useEffect, useState } from "react";
 import "./Projects.css";
+import { ReactElement, useEffect, useState } from "react";
 import { Project } from "../../../model/projects/Project";
 import { TickIcon } from "../../assets/icons/TickIcon";
+import { getProjectsFromGitHub } from "../../../controller/services/GitHubService";
+import { GitHubIcon } from "../../assets/icons/GitHubIcon";
 
 export const Projects = () => {
-  const gitHubRepos: string = "https://api.github.com/users/osamakashif/repos";
-
   const [sortByLanguage, setSortByLanguage] = useState<boolean>(true);
   const [languages, setLanguages] = useState<string[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
+  const [loaded, setLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    const getGitHubRepos = async () => {
+      getProjectsFromGitHub().then((response) => {
+        if (response.projects.length === 0) {
+          setLoaded(false);
+        } else {
+          setLoaded(true);
+        }
+        setProjects(response.projects);
+        setLanguages(response.languages);
+      });
+    };
+    getGitHubRepos();
+  }, []);
 
   const displayAllProjects = (): ReactElement<any, any> => {
     return (
@@ -80,56 +96,49 @@ export const Projects = () => {
     );
   };
 
-  useEffect(() => {
-    const getGitHubReposWithFetch = async () => {
-      const response = await fetch(gitHubRepos, {
-        headers: {
-          "User-Agent": "request",
-        },
-      });
-      const jsonData = await response.json();
-      let newProjects: Project[] = [];
-      let newLanguages: string[] = [];
-      Array.from(jsonData).forEach((data: any) => {
-        newProjects.push(
-          new Project(
-            (data.name as string).replaceAll("_", " "),
-            data.html_url,
-            data.language,
-            data.description
-          )
-        );
-        if (!newLanguages.includes(data.language)) {
-          newLanguages.push(data.language);
-        }
-      });
-      setProjects(newProjects);
-      setLanguages(newLanguages);
-    };
-    getGitHubReposWithFetch();
-  }, []);
-
   return (
     <div id="projects" className="section-content">
       <h1>Projects</h1>
-      <div className="sorting-option-container">
-        <p>Sort by programming language</p>
-        <button
-          className={
-            "inline-start-margin " +
-            (sortByLanguage ? "sorting-active" : "sorting-inactive")
-          }
-          onClick={() => {
-            setSortByLanguage(!sortByLanguage);
-          }}
-        >
-          {sortByLanguage && <TickIcon />}
-        </button>
-      </div>
-      <div>
-        {projects && !sortByLanguage && displayAllProjects()}
-        {projects && sortByLanguage && displayLanguageSortedBlocks()}
-      </div>
+      {loaded && (
+        <>
+          <div className="sorting-option-container">
+            <p>Sort by programming language</p>
+            <button
+              className={
+                "inline-start-margin " +
+                (sortByLanguage ? "sorting-active" : "sorting-inactive")
+              }
+              onClick={() => {
+                setSortByLanguage(!sortByLanguage);
+              }}
+            >
+              {sortByLanguage && <TickIcon />}
+            </button>
+          </div>
+          <div>
+            {projects && !sortByLanguage && displayAllProjects()}
+            {projects && sortByLanguage && displayLanguageSortedBlocks()}
+          </div>
+        </>
+      )}
+      {!loaded && (
+        <div>
+          <p>
+            In case the projects are not visible on this page. You can see some
+            of my projects on{" "}
+            <a
+              href="https://github.com/osamakashif"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="new-page-link"
+            >
+              GitHub
+              <GitHubIcon className="link-icon inline-start-margin" />
+            </a>
+            .
+          </p>
+        </div>
+      )}
     </div>
   );
 };

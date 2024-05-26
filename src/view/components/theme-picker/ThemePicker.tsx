@@ -1,6 +1,6 @@
 import "./ThemePicker.css";
 import { useContext } from "react";
-import { ColourThemeContext } from "../../../controller/context/ColourThemeContext";
+import { ColourThemeContext } from "../../../controller/context/colour-theme-context/ColourThemeContext";
 import { SunIcon } from "../../assets/icons/SunIcon";
 import { MoonIcon } from "../../assets/icons/MoonIcon";
 import { SunMoonIcon } from "../../assets/icons/SunMoonIcon";

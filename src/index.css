@@ -16,9 +16,30 @@
 body {
   margin: 0;
   font-family: "RobotoDraft", "Roboto", sans-serif;
+  font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-height: 100vh;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 1em;
+}
+
+a {
+  font-size: 1em;
+}
+
+button {
+  font-size: 1em;
 }
 
 .section-content {

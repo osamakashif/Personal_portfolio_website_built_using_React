@@ -1,0 +1,28 @@
+.themes {
+  border: solid 1px var(--primary-colour);
+  border-radius: 50px;
+  display: flex;
+  width: fit-content;
+  background-color: var(--secondary-background-colour);
+  align-items: center;
+}
+
+.theme-button {
+  border: none;
+  border-radius: 50px;
+  margin: 10px;
+  color: var(--primary-colour);
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.theme-button:hover {
+  cursor: pointer;
+  background-color: var(--highlight-colour);
+}
+
+.selected {
+  border: solid 1px transparent;
+  background-color: var(--tertiary-background-colour);
+}

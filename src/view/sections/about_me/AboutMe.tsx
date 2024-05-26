@@ -1,22 +1,17 @@
 import "./AboutMe.css";
 import profilePicture from "../../assets/images/profile_picture.jpg";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GitHubIcon } from "../../assets/icons/GitHubIcon";
 import { LinkedInIcon } from "../../assets/icons/LinkedInIcon";
+import { ContentContext } from "../../../controller/context/content-context/ContentContext";
 
 export const AboutMe = () => {
   const [writtenStatement, setWrittenStatement] = useState<boolean>(false);
   const [statementIndex, setStatementIndex] = useState<number>(0);
-  const greeting: string = "Hi,";
+  const {content} = useContext(ContentContext)
+  const statements: string[] = content.aboutMeStatementsArray;
   const typingDuration: number = 75;
   const typingPauseDuration: number = 500;
-  const statements: string[] = [
-    "I'm Osama.",
-    "I'm a Software Engineer.",
-    "I'm a Software Developer.",
-    "I'm a Researcher.",
-    "I'm Osama.",
-  ];
 
   const useTypeText = () => {
     const [typedText, setTypedText] = useState<string>("");
@@ -56,7 +51,7 @@ export const AboutMe = () => {
 
   return (
     <div id="about_me" className="section-content">
-      <h1>About Me</h1>
+      <h1>{content.aboutMeHeading}</h1>
       <div className="about_me_block">
         <img
           src={profilePicture}
@@ -64,7 +59,7 @@ export const AboutMe = () => {
           alt="Osama Kashif"
         />
         <div>
-          <h2>{greeting}</h2>
+          <h2>{content.aboutMeGreeting}</h2>
           <h2>{useTypeText()}</h2>
         </div>
       </div>

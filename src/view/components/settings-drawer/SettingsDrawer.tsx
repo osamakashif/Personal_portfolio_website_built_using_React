@@ -3,6 +3,7 @@ import { SettingsIcon } from "../../assets/icons/SettingsIcon";
 import { ThemePicker } from "../theme-picker/ThemePicker";
 import { useState } from "react";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
+import { LanguagePicker } from "../language-picker/LanguagePicker";
 
 export const SettingsDrawer = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -59,6 +60,8 @@ export const SettingsDrawer = () => {
           <div className="settings-options-container">
             <p className="setting-name">Theme</p>
             <ThemePicker />
+            <p className="setting-name">Language</p>
+            <LanguagePicker />
           </div>
         </div>
       </div>

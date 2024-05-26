@@ -5,6 +5,7 @@ import { MenuIcon } from "../../assets/icons/MenuIcon";
 import { SettingsDrawer } from "../settings-drawer/SettingsDrawer";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 import { ThemePicker } from "../theme-picker/ThemePicker";
+import { LanguagePicker } from "../language-picker/LanguagePicker";
 
 export const Navbar = () => {
   let pages: Page[] = [];
@@ -88,6 +89,8 @@ export const Navbar = () => {
                 <p className="settings-title-style settings-title-border">Settings</p>
                 <p className="setting-name">Theme</p>
                 <ThemePicker />
+                <p className="setting-name">Language</p>
+                <LanguagePicker />
               </div>
             </div>
           </div>

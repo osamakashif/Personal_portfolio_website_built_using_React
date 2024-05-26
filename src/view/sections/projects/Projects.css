@@ -14,8 +14,8 @@
   align-items: center;
 }
 
-.center-aligned-card {
-  justify-content: center;
+.space-justified-card {
+  justify-content: space-around;
 }
 
 .project-card {

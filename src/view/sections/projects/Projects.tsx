@@ -28,7 +28,7 @@ export const Projects = () => {
 
   const displayAllProjects = (): ReactElement<any, any> => {
     return (
-      <div className="card-container center-aligned-card">
+      <div className="card-container space-justified-card">
         {projects.map((project) => {
           return (
             <div key={project.name} className="project-card">

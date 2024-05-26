@@ -83,7 +83,7 @@ export const AboutMe = () => {
           className="new-page-link"
         >
           GitHub
-          <GitHubIcon className="link-icon inline-icon-padding" />
+          <GitHubIcon className="link-icon inline-start-margin" />
         </a>
         .
       </p>

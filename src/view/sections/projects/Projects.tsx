@@ -1,6 +1,7 @@
 import { ReactElement, useEffect, useState } from "react";
 import "./Projects.css";
 import { Project } from "../../../model/projects/Project";
+import { TickIcon } from "../../assets/icons/TickIcon";
 
 export const Projects = () => {
   const gitHubRepos: string = "https://api.github.com/users/osamakashif/repos";
@@ -15,7 +16,12 @@ export const Projects = () => {
         {projects.map((project) => {
           return (
             <div key={project.name} className="project-card">
-              <a className="new-page-link" href={project.link} target="_blank" rel="noopener noreferrer">
+              <a
+                className="new-page-link"
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {project.name}
               </a>
               <p>{project.mainLanguage}</p>
@@ -30,7 +36,12 @@ export const Projects = () => {
   const displayLanguageSortedProject = (project: Project): JSX.Element => {
     return (
       <div key={project.name} className="project-card">
-        <a className="new-page-link" href={project.link} target="_blank" rel="noopener noreferrer">
+        <a
+          className="new-page-link"
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {project.name}
         </a>
         <p>{project.description}</p>
@@ -103,14 +114,17 @@ export const Projects = () => {
       <h1>Projects</h1>
       <div className="sorting-option-container">
         <p>Sort by programming language</p>
-        <input
-          type="checkbox"
-          className="rounded-checkbox"
-          checked={sortByLanguage}
-          onChange={() => {
+        <button
+          className={
+            "inline-start-margin " +
+            (sortByLanguage ? "sorting-active" : "sorting-inactive")
+          }
+          onClick={() => {
             setSortByLanguage(!sortByLanguage);
           }}
-        ></input>
+        >
+          {sortByLanguage && <TickIcon />}
+        </button>
       </div>
       <div>
         {projects && !sortByLanguage && displayAllProjects()}

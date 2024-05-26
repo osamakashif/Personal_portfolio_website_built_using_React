@@ -67,7 +67,8 @@ export const AboutMe = () => {
         I am a Software Engineer/Developer with an educational background in
         Software Engineering, Mathematics, and Physics. Have diverse industry
         and academic experience with various topics including Web Development,
-        Robotics, and Artificial Intelligence (AI).
+        App Development, Robotics, and Automation - with and without Artificial
+        Intelligence (AI).
       </p>
       <p>
         You can see some of my projects on{" "}

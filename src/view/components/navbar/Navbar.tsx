@@ -9,7 +9,7 @@ import { LanguagePicker } from "../language-picker/LanguagePicker";
 
 export const Navbar = () => {
   let pages: Page[] = [];
-  pages.push(new Page("Home", ""));
+  pages.push(new Page("Home", "#home"));
   pages.push(new Page("About Me", "#about_me"));
   pages.push(new Page("Projects", "#projects"));
   pages.push(new Page("Technological", "#tech"));

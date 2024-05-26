@@ -1,8 +1,10 @@
 .tech-container {
   display: flex;
   flex-flow: wrap;
+  justify-content: space-between;
 }
 
 .tech-links {
-  padding-inline-end: 10px;
+  padding-inline-end: 2em;
+  padding-bottom: 2em;
 }

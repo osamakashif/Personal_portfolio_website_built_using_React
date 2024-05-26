@@ -130,7 +130,7 @@ export const Projects = () => {
               href="https://github.com/osamakashif"
               target="_blank"
               rel="noopener noreferrer"
-              className="new-page-link"
+              className="new-page-link  inline-link"
             >
               GitHub
               <GitHubIcon className="link-icon inline-start-margin" />

@@ -147,6 +147,11 @@ button {
 .new-page-link:hover {
   text-decoration: underline;
 }
+
 .inline-start-margin {
   margin-inline-start: 5px;
+}
+
+.inline-link {
+  font-size: 1em;
 }

@@ -4,11 +4,11 @@
   --light-colour: #ffffff;
   --hover-background-rgb: 69, 69, 69;
   --light-blue-grey-colour: #f1f0fd;
-  --light-pink-colour: #ffccfc;
-  --highlight-pink-colour: #f3a8ee;
-  --dark-purple-colour: #51045a;
+  --light-blue-colour: #b9c0ff;
+  --highlight-blue-colour: #a7b7e9;
+  --dark-blue-colour: #120067;
   --highlight-purple-colour: #760882;
-  --dark-blue-colour: #250a40;
+  --dark-purple-colour: #250a40;
   --light-grey-colour: #d4d4d4;
   --dark-grey-colour: #444444;
 }
@@ -51,29 +51,29 @@ button {
 .dark {
   --background-colour: var(--dark-colour);
   --primary-colour: var(--light-colour);
-  --secondary-background-colour: var(--dark-blue-colour);
-  --tertiary-background-colour: var(--dark-purple-colour);
+  --secondary-background-colour: var(--dark-purple-colour);
+  --tertiary-background-colour: var(--dark-blue-colour);
   --highlight-colour: var(--highlight-purple-colour);
-  --link-colour: var(--light-pink-colour);
+  --link-colour: var(--light-blue-colour);
 }
 
 .light {
   --background-colour: var(--light-colour);
   --primary-colour: var(--dark-colour);
   --secondary-background-colour: var(--light-blue-grey-colour);
-  --tertiary-background-colour: var(--light-pink-colour);
-  --highlight-colour: var(--highlight-pink-colour);
-  --link-colour: var(--dark-purple-colour);
+  --tertiary-background-colour: var(--light-blue-colour);
+  --highlight-colour: var(--highlight-blue-colour);
+  --link-colour: var(--dark-blue-colour);
 }
 
 @media (prefers-color-scheme: dark) {
   .auto {
     --background-colour: var(--dark-colour);
     --primary-colour: var(--light-colour);
-    --secondary-background-colour: var(--dark-blue-colour);
-    --tertiary-background-colour: var(--dark-purple-colour);
+    --secondary-background-colour: var(--dark-purple-colour);
+    --tertiary-background-colour: var(--dark-blue-colour);
     --highlight-colour: var(--highlight-purple-colour);
-    --link-colour: var(--light-pink-colour);
+    --link-colour: var(--light-blue-colour);
   }
 }
 
@@ -82,9 +82,9 @@ button {
     --background-colour: var(--light-colour);
     --primary-colour: var(--dark-colour);
     --secondary-background-colour: var(--light-blue-grey-colour);
-    --tertiary-background-colour: var(--light-pink-colour);
-    --highlight-colour: var(--highlight-pink-colour);
-    --link-colour: var(--dark-purple-colour);
+    --tertiary-background-colour: var(--light-blue-colour);
+    --highlight-colour: var(--highlight-blue-colour);
+    --link-colour: var(--dark-blue-colour);
   }
 }
 

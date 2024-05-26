@@ -18,7 +18,7 @@ export const getProjectsFromGitHub = async (): Promise<{
 }> => {
   let projects: Project[] = [];
   let languages: string[] = [];
-  getPublicGitHubReposForUsername("osamakashif").then((response) => {
+  await getPublicGitHubReposForUsername("osamakashif").then((response) => {
     Array.from(response).forEach((data: any) => {
       projects.push(
         new Project(

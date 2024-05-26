@@ -42,6 +42,7 @@ export const Navbar = () => {
       </div>
       <div className="small-screen">
         <button
+          aria-label="Navbar menu trigger. Toggle to open navbar menu."
           className="in-navbar-button"
           onClick={() => {
             setMenuOpen(true);
@@ -53,6 +54,7 @@ export const Navbar = () => {
           <div className="vertical-nav-container">
             <div className="vertical-nav-close-container">
               <button
+                aria-label="Navbar menu trigger. Toggle to close navbar menu."
                 className="in-navbar-button"
                 onClick={() => {
                   closeMenu();
@@ -85,7 +87,9 @@ export const Navbar = () => {
             </ul>
             <div className="in-navbar-settings-container">
               <div className="in-navbar-settings">
-                <p className="settings-title-style settings-title-border">Settings</p>
+                <p className="settings-title-style settings-title-border">
+                  Settings
+                </p>
                 <p className="setting-name">Theme</p>
                 <ThemePicker />
               </div>

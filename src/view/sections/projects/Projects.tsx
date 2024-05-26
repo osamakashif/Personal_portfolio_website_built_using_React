@@ -104,6 +104,7 @@ export const Projects = () => {
           <div className="sorting-option-container">
             <p>Sort by programming language</p>
             <button
+              aria-label="Sort trigger. Toggle to sort projects by programming language, or show all projects not sorted by programming language."
               className={
                 "inline-start-margin " +
                 (sortByLanguage ? "sorting-active" : "sorting-inactive")

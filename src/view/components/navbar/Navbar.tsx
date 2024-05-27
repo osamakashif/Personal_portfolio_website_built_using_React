@@ -6,13 +6,14 @@ import { SettingsDrawer } from "../settings-drawer/SettingsDrawer";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 import { ThemePicker } from "../theme-picker/ThemePicker";
 import { LanguagePicker } from "../language-picker/LanguagePicker";
+import { NavbarLogo } from "../navbar-logo/NavbarLogo";
 
 export const Navbar = () => {
   let pages: Page[] = [];
   pages.push(new Page("Home", "#home"));
   pages.push(new Page("About Me", "#about_me"));
   pages.push(new Page("Projects", "#projects"));
-  pages.push(new Page("Technological", "#tech"));
+  pages.push(new Page("Skills", "#skills"));
 
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [closing, setClosing] = useState<boolean>(false);
@@ -29,6 +30,7 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="big-screen">
         <ul className="nav-list">
+          <NavbarLogo />
           {pages.map((page) => {
             return (
               <li key={page.name}>
@@ -42,7 +44,11 @@ export const Navbar = () => {
         <SettingsDrawer />
       </div>
       <div className="small-screen">
+        <div className="small-nav-logo-container">
+          <NavbarLogo />
+        </div>
         <button
+          aria-label="Navbar menu trigger. Toggle to open navbar menu."
           className="in-navbar-button"
           onClick={() => {
             setMenuOpen(true);
@@ -54,6 +60,7 @@ export const Navbar = () => {
           <div className="vertical-nav-container">
             <div className="vertical-nav-close-container">
               <button
+                aria-label="Navbar menu trigger. Toggle to close navbar menu."
                 className="in-navbar-button"
                 onClick={() => {
                   closeMenu();
@@ -86,7 +93,9 @@ export const Navbar = () => {
             </ul>
             <div className="in-navbar-settings-container">
               <div className="in-navbar-settings">
-                <p className="settings-title-style settings-title-border">Settings</p>
+                <p className="settings-title-style settings-title-border">
+                  Settings
+                </p>
                 <p className="setting-name">Theme</p>
                 <ThemePicker />
                 <p className="setting-name">Language</p>

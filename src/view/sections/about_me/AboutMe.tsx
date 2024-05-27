@@ -12,6 +12,7 @@ export const AboutMe = () => {
   const statements: string[] = content.aboutMeStatementsArray;
   const typingDuration: number = 75;
   const typingPauseDuration: number = 500;
+  const endStatementsDuration: number = 5000;
 
   const useTypeText = () => {
     const [typedText, setTypedText] = useState<string>("");
@@ -26,6 +27,10 @@ export const AboutMe = () => {
             if (typedText.length === toWrite.length) {
               setWrittenStatement(true);
               setDelayDuration(typingPauseDuration);
+              if (statementIndex === statements.length - 1) {
+                setStatementIndex(0);
+                setDelayDuration(endStatementsDuration);
+              }
             }
           }
           if (statementIndex !== statements.length - 1 && writtenStatement) {

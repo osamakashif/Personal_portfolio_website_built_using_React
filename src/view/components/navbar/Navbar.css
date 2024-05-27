@@ -18,7 +18,7 @@
 .nav-link {
   text-decoration: none;
   color: var(--primary-colour);
-  padding-left: 10px;
+  padding-left: 2em;
 }
 
 .nav-link:hover {
@@ -34,7 +34,12 @@
 .small-screen {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.small-nav-logo-container {
+  margin-left: 1em;
+  padding-left: 20px;
 }
 
 .in-navbar-button {
@@ -103,13 +108,21 @@
   border-bottom: solid 1px var(--primary-colour);
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 791px) {
   .small-screen {
     display: none;
   }
+
+  .nav-link {
+    font-size: 1em;
+  }
+
+  .settings-title-style {
+    font-size: 1em;
+  }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 790px) {
   .big-screen {
     display: none;
   }

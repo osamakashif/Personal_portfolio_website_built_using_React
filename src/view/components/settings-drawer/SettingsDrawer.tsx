@@ -21,6 +21,7 @@ export const SettingsDrawer = () => {
   return (
     <div>
       <button
+        aria-label="Settings menu trigger. Toggle to open settings menu."
         className="in-navbar-button"
         onClick={() => {
           setMenuOpen(true);
@@ -29,6 +30,12 @@ export const SettingsDrawer = () => {
           setIconFilled(true);
         }}
         onMouseLeave={() => {
+          setIconFilled(false);
+        }}
+        onTouchStart={() => {
+          setIconFilled(true);
+        }}
+        onTouchEnd={() => {
           setIconFilled(false);
         }}
       >
@@ -47,8 +54,11 @@ export const SettingsDrawer = () => {
           }
         >
           <div className="settings-header">
-            <p className="settings-title-padding settings-title-style">Settings</p>
+            <p className="settings-title-padding settings-title-style">
+              Settings
+            </p>
             <button
+              aria-label="Settings menu trigger. Toggle to close settings menu."
               className="in-navbar-button"
               onClick={() => {
                 closeMenu();

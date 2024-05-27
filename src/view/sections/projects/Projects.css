@@ -21,16 +21,16 @@
 .project-card {
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  padding: 10px;
+  margin: 1em;
+  padding: 2em;
   border-radius: 20px;
   width: 100%;
   background-color: var(--tertiary-background-colour);
 }
 
 .language-card {
-  margin: 10px;
-  padding: 10px;
+  margin: 1em;
+  padding: 1em;
   border-radius: 20px;
   width: 100%;
   background-color: var(--secondary-background-colour);

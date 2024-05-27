@@ -1,0 +1,26 @@
+.nav-logo-text {
+  margin-top: 1em;
+  margin-left: 0.5em;
+  margin-bottom: 0;
+  font-size: 0.8em;
+  position: absolute;
+}
+
+.nav-logo-ring {
+  border-radius: 50%;
+  width: 1em;
+  height: 1.5em;
+  border: solid 0.1em var(--primary-colour);
+  transform: rotateX(225deg) rotateY(225deg) rotateZ(30deg);
+}
+
+.nav-logo-link {
+  font-size: 1em;
+  color: var(--primary-colour);
+  text-decoration: none;
+  display: flex;
+}
+
+.nav-logo-link:hover {
+  cursor: pointer;
+}

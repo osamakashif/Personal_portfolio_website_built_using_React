@@ -43,10 +43,10 @@ button {
 }
 
 .section-content {
-  padding-left: 10%;
-  padding-right: 10%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding-top: 70px;
-  min-height: 100vh;
+  border-bottom: solid 1px var(--primary-colour);
 }
 
 .dark {
@@ -143,6 +143,7 @@ button {
   color: var(--link-colour);
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.5em;
 }
 
 .new-page-link:hover {

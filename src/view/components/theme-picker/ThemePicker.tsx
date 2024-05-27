@@ -16,6 +16,7 @@ export const ThemePicker = () => {
   return (
     <div className="themes">
       <button
+        aria-label="System colour theme."
         className={"theme-button" + selectedClass("auto")}
         onClick={() => {
           switchTheme("auto");
@@ -25,6 +26,7 @@ export const ThemePicker = () => {
         System
       </button>
       <button
+        aria-label="Light colour theme."
         className={"theme-button" + selectedClass("light")}
         onClick={() => {
           switchTheme("light");
@@ -34,6 +36,7 @@ export const ThemePicker = () => {
         Light
       </button>
       <button
+        aria-label="Dark colour theme."
         className={"theme-button" + selectedClass("dark")}
         onClick={() => {
           switchTheme("dark");

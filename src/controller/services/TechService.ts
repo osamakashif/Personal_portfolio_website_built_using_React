@@ -74,6 +74,10 @@ const technologyPages: Page[] = [
     link: "https://www.python.org/",
   },
   {
+    name: "ROS (Robot Operating System)",
+    link: "https://www.ros.org/",
+  },
+  {
     name: "Git",
     link: "https://git-scm.com/",
   },

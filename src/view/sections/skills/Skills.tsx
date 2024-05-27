@@ -1,13 +1,13 @@
 import { getTechPages } from "../../../controller/services/TechService";
 import { Page } from "../../../model/pages/Page";
-import "./Tech.css";
+import "./Skills.css";
 
-export const Tech = () => {
+export const Skills = () => {
   const technologies: Page[] = getTechPages();
 
   return (
-    <div id="tech" className="section-content">
-      <h1>Technological Experience</h1>
+    <div id="skills" className="section-content">
+      <h1>Technological Experience & Skills</h1>
       <div className="tech-container">
         {technologies &&
           technologies.map((tech, index) => (

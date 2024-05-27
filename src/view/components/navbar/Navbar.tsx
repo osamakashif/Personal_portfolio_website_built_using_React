@@ -11,7 +11,7 @@ export const Navbar = () => {
   pages.push(new Page("Home", "#home"));
   pages.push(new Page("About Me", "#about_me"));
   pages.push(new Page("Projects", "#projects"));
-  pages.push(new Page("Technological", "#tech"));
+  pages.push(new Page("Skills", "#skills"));
 
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [closing, setClosing] = useState<boolean>(false);

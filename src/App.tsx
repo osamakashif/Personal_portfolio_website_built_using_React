@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { Navbar } from "./view/components/navbar/Navbar";
 import { AboutMe } from "./view/sections/about_me/AboutMe";
 import { Projects } from "./view/sections/projects/Projects";
-import { Tech } from "./view/sections/tech/Tech";
+import { Skills } from "./view/sections/skills/Skills";
 import { ColourThemeContext } from "./controller/context/colour-theme-context/ColourThemeContext";
 import { Home } from "./view/sections/home/Home";
 
@@ -16,7 +16,7 @@ function App() {
       <Home />
       <AboutMe />
       <Projects />
-      <Tech />
+      <Skills />
     </div>
   );
 }

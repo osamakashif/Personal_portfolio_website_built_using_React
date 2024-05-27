@@ -107,6 +107,15 @@
   .small-screen {
     display: none;
   }
+
+  .nav-link {
+    font-size: 1em;
+  }
+
+  .settings-title-style {
+    font-size: 1em;
+  }
+
 }
 
 @media only screen and (max-width: 790px) {

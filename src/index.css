@@ -143,6 +143,7 @@ button {
   color: var(--link-colour);
   text-decoration: none;
   font-weight: bold;
+  font-size: 1.5em;
 }
 
 .new-page-link:hover {

@@ -5,6 +5,7 @@ import { MenuIcon } from "../../assets/icons/MenuIcon";
 import { SettingsDrawer } from "../settings-drawer/SettingsDrawer";
 import { CloseIcon } from "../../assets/icons/CloseIcon";
 import { ThemePicker } from "../theme-picker/ThemePicker";
+import { NavbarLogo } from "../navbar-logo/NavbarLogo";
 
 export const Navbar = () => {
   let pages: Page[] = [];
@@ -28,6 +29,7 @@ export const Navbar = () => {
     <nav className="navbar">
       <div className="big-screen">
         <ul className="nav-list">
+          <NavbarLogo />
           {pages.map((page) => {
             return (
               <li key={page.name}>
@@ -41,6 +43,9 @@ export const Navbar = () => {
         <SettingsDrawer />
       </div>
       <div className="small-screen">
+        <div className="small-nav-logo-container">
+          <NavbarLogo />
+        </div>
         <button
           aria-label="Navbar menu trigger. Toggle to open navbar menu."
           className="in-navbar-button"

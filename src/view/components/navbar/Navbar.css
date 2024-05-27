@@ -18,7 +18,7 @@
 .nav-link {
   text-decoration: none;
   color: var(--primary-colour);
-  padding-left: 10px;
+  padding-left: 2em;
 }
 
 .nav-link:hover {
@@ -103,13 +103,13 @@
   border-bottom: solid 1px var(--primary-colour);
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 791px) {
   .small-screen {
     display: none;
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 790px) {
   .big-screen {
     display: none;
   }

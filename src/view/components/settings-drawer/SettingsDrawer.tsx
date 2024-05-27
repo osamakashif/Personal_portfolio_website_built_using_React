@@ -31,6 +31,12 @@ export const SettingsDrawer = () => {
         onMouseLeave={() => {
           setIconFilled(false);
         }}
+        onTouchStart={() => {
+          setIconFilled(true);
+        }}
+        onTouchEnd={() => {
+          setIconFilled(false);
+        }}
       >
         {!iconFilled && <SettingsIcon />}
         {iconFilled && <SettingsIcon className="icon-fill" />}

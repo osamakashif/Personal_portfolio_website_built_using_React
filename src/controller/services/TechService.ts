@@ -39,11 +39,11 @@ const technologyPages: Page[] = [
   },
   {
     name: "HTML",
-    link: "https://en.wikipedia.org/wiki/HTML",
+    link: "https://www.w3schools.com/html/",
   },
   {
     name: "CSS",
-    link: "https://en.wikipedia.org/wiki/CSS",
+    link: "https://www.w3schools.com/css",
   },
   {
     name: "JavaScript",
@@ -51,15 +51,47 @@ const technologyPages: Page[] = [
   },
   {
     name: "ReactJS",
-    link: "https://reactjs.org/",
+    link: "https://react.dev/",
   },
   {
     name: "React Native",
     link: "https://reactnative.dev/",
   },
   {
+    name: "Angular",
+    link: "https://angular.dev/",
+  },
+  {
+    name: "MongoDB",
+    link: "https://www.mongodb.com/",
+  },
+  {
     name: "SQL",
     link: "https://en.wikipedia.org/wiki/SQL",
+  },
+  {
+    name: "Front-End Development",
+    link: "https://www.w3schools.com/whatis/whatis_frontenddev.asp",
+  },
+  {
+    name: "Back-end Development",
+    link: "https://www.coursera.org/articles/back-end-developer",
+  },
+  {
+    name: "Full-stack Web Development",
+    link: "https://www.w3schools.com/whatis/whatis_fullstack.asp",
+  },
+  {
+    name: "App Development",
+    link: "https://en.wikipedia.org/wiki/Mobile_app_development",
+  },
+  {
+    name: "Automation",
+    link: "https://en.wikipedia.org/wiki/Automation",
+  },
+  {
+    name: "Software Architecture",
+    link: "https://en.wikipedia.org/wiki/Software_architecture",
   },
   {
     name: "MATLAB",

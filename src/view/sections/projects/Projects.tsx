@@ -1,9 +1,9 @@
 import "./Projects.css";
 import { ReactElement, useEffect, useState } from "react";
 import { Project } from "../../../model/projects/Project";
-import { TickIcon } from "../../assets/icons/TickIcon";
 import { getProjectsFromGitHub } from "../../../controller/services/GitHubService";
 import { GitHubIcon } from "../../assets/icons/GitHubIcon";
+import { CheckOption } from "../../components/check-option/CheckOption";
 
 export const Projects = () => {
   const [sortByLanguage, setSortByLanguage] = useState<boolean>(true);
@@ -101,21 +101,12 @@ export const Projects = () => {
       <h1>Projects</h1>
       {loaded && (
         <>
-          <div className="sorting-option-container">
-            <p>Sort by programming language</p>
-            <button
-              aria-label="Sort trigger. Toggle to sort projects by programming language, or show all projects not sorted by programming language."
-              className={
-                "inline-start-margin " +
-                (sortByLanguage ? "sorting-active" : "sorting-inactive")
-              }
-              onClick={() => {
-                setSortByLanguage(!sortByLanguage);
-              }}
-            >
-              {sortByLanguage && <TickIcon />}
-            </button>
-          </div>
+          <CheckOption
+            checked={sortByLanguage}
+            setChecked={setSortByLanguage}
+            label="Sort by programming language"
+            ariaLabel="Sort trigger. Toggle to sort projects by programming language, or show all projects not sorted by programming language."
+          />
           <div>
             {projects && !sortByLanguage && displayAllProjects()}
             {projects && sortByLanguage && displayLanguageSortedBlocks()}

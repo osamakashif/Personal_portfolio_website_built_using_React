@@ -70,6 +70,10 @@ const technologyPages: Page[] = [
     link: "https://en.wikipedia.org/wiki/SQL",
   },
   {
+    name: "AWS",
+    link: "https://aws.amazon.com/",
+  },
+  {
     name: "Front-End Development",
     link: "https://www.w3schools.com/whatis/whatis_frontenddev.asp",
   },

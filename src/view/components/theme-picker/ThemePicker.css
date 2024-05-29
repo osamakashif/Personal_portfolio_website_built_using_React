@@ -3,6 +3,8 @@
   border-radius: 50px;
   display: flex;
   width: fit-content;
+  max-width: 100%;
+  flex-wrap: wrap;
   background-color: var(--secondary-background-colour);
   align-items: center;
 }

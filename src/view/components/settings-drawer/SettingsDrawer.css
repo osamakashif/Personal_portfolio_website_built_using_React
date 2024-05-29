@@ -11,7 +11,7 @@
 }
 
 .settings-background {
-  z-index: 2;
+  z-index: 6;
   top: 0;
   left: 0;
   background-color: rgba(var(--hover-background-rgb), 0.5);
@@ -21,7 +21,7 @@
 }
 
 .settings-container {
-  z-index: 3;
+  z-index: 7;
   background-color: var(--background-colour);
   position: fixed;
   right: 0;

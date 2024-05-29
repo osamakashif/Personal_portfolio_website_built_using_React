@@ -27,6 +27,7 @@
 .skill-name-and-progress {
   display: flex;
   align-items: center;
+  margin-bottom: 1em;
 }
 
 .progress-bar-cell {

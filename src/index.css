@@ -46,6 +46,10 @@ button {
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.section-border-bottom {
   border-bottom: solid 1px var(--primary-colour);
 }
 

@@ -97,7 +97,7 @@ export const Projects = () => {
   };
 
   return (
-    <div id="projects" className="section-content">
+    <div id="projects" className="section-content section-border-bottom">
       <h1>Projects</h1>
       {loaded && (
         <>

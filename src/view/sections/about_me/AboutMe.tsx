@@ -70,7 +70,7 @@ export const AboutMe = () => {
   };
 
   return (
-    <div id="about_me" className="section-content">
+    <div id="about_me" className="section-content section-border-bottom">
       <h1>About Me</h1>
       <div className="about_me_block">
         <img

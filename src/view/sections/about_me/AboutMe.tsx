@@ -19,6 +19,16 @@ export const AboutMe = () => {
     "I'm Osama.",
   ];
 
+  const statementArraysToString = (statements: string[]): string => {
+    let finalStatement = "";
+    statements.forEach((statement, index) => {
+      if (index !== statements.length - 1) {
+        finalStatement += " " + statement;
+      }
+    });
+    return finalStatement.trim();
+  };
+
   const useTypeText = () => {
     const [typedText, setTypedText] = useState<string>("");
     const [delayDuration, setDelayDuration] = useState<number>(typingDuration); // In milliseconds.
@@ -70,7 +80,9 @@ export const AboutMe = () => {
         />
         <div>
           <h2>{greeting}</h2>
-          <h2>{useTypeText()}</h2>
+          <h2 aria-label={statementArraysToString(statements)}>
+            {useTypeText()}
+          </h2>
         </div>
       </div>
       <p>

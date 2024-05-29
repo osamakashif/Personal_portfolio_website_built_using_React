@@ -27,8 +27,8 @@ export const Skills = () => {
       <CheckOption
         checked={progressVisible}
         setChecked={setProgressVisible}
-        label="Show progress"
-        ariaLabel="Progress toggle. Toggle to show skills with progress or map of skills."
+        label="Show experience"
+        ariaLabel="Experience toggle. Toggle to show skills with amount of experience or alternatively just a map of skills."
       />
       {!progressVisible && (
         <div className="skills-container">

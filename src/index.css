@@ -7,8 +7,8 @@
   --light-blue-colour: #b9c0ff;
   --highlight-blue-colour: #a7b7e9;
   --dark-blue-colour: #120067;
-  --highlight-purple-colour: #760882;
-  --dark-purple-colour: #250a40;
+  --highlight-purple-colour: #250a40;
+  --dark-grey-colour: #494949;
   --light-grey-colour: #d4d4d4;
   --dark-grey-colour: #444444;
 }
@@ -46,13 +46,17 @@ button {
   margin-left: 10%;
   margin-right: 10%;
   padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.section-border-bottom {
   border-bottom: solid 1px var(--primary-colour);
 }
 
 .dark {
   --background-colour: var(--dark-colour);
   --primary-colour: var(--light-colour);
-  --secondary-background-colour: var(--dark-purple-colour);
+  --secondary-background-colour: var(--dark-grey-colour);
   --tertiary-background-colour: var(--dark-blue-colour);
   --highlight-colour: var(--highlight-purple-colour);
   --link-colour: var(--light-blue-colour);
@@ -71,7 +75,7 @@ button {
   .auto {
     --background-colour: var(--dark-colour);
     --primary-colour: var(--light-colour);
-    --secondary-background-colour: var(--dark-purple-colour);
+    --secondary-background-colour: var(--dark-grey-colour);
     --tertiary-background-colour: var(--dark-blue-colour);
     --highlight-colour: var(--highlight-purple-colour);
     --link-colour: var(--light-blue-colour);

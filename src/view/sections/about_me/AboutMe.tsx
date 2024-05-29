@@ -8,11 +8,21 @@ import { ContentContext } from "../../../controller/context/content-context/Cont
 export const AboutMe = () => {
   const [writtenStatement, setWrittenStatement] = useState<boolean>(false);
   const [statementIndex, setStatementIndex] = useState<number>(0);
-  const {content} = useContext(ContentContext)
+  const { content } = useContext(ContentContext);
   const statements: string[] = content.aboutMeStatementsArray;
   const typingDuration: number = 75;
   const typingPauseDuration: number = 500;
   const endStatementsDuration: number = 5000;
+
+  const statementArraysToString = (statements: string[]): string => {
+    let finalStatement = "";
+    statements.forEach((statement, index) => {
+      if (index !== statements.length - 1) {
+        finalStatement += " " + statement;
+      }
+    });
+    return finalStatement.trim();
+  };
 
   const useTypeText = () => {
     const [typedText, setTypedText] = useState<string>("");
@@ -55,7 +65,7 @@ export const AboutMe = () => {
   };
 
   return (
-    <div id="about_me" className="section-content">
+    <div id="about_me" className="section-content section-border-bottom">
       <h1>{content.aboutMeHeading}</h1>
       <div className="about_me_block">
         <img
@@ -65,7 +75,9 @@ export const AboutMe = () => {
         />
         <div>
           <h2>{content.aboutMeGreeting}</h2>
-          <h2>{useTypeText()}</h2>
+          <h2 aria-label={statementArraysToString(statements)}>
+            {useTypeText()}
+          </h2>
         </div>
       </div>
       <p>

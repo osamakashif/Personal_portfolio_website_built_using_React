@@ -5,6 +5,8 @@ import {
   useMemo,
   useState,
 } from "react";
+import darkFavIcon from "../../../view/assets/favicons/dark/logo512.png";
+import lightFavIcon from "../../../view/assets/favicons/light/logo512.png";
 
 export const ColourThemeContext = createContext({
   theme: "auto",
@@ -34,6 +36,25 @@ export function ColourThemeContextProvider({ children }: { children: any }) {
       setTheme(theme);
     }
     setFirstLoad(false);
+  }, [theme]);
+
+  useEffect(() => {
+    let link: Element | HTMLLinkElement | null =
+      document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement("link");
+      (link as HTMLLinkElement).rel = "icon";
+      document.head.appendChild(link);
+    }
+    if (theme === "dark") {
+      (link as HTMLLinkElement).href = darkFavIcon;
+    } else if (theme === "light") {
+      (link as HTMLLinkElement).href = lightFavIcon;
+    } else {
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? ((link as HTMLLinkElement).href = darkFavIcon)
+        : ((link as HTMLLinkElement).href = lightFavIcon);
+    }
   }, [theme]);
 
   const switchTheme = useCallback((newTheme: "auto" | "light" | "dark") => {

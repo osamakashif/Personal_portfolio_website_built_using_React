@@ -1,10 +1,42 @@
-.tech-container {
+.skills-container {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
 }
 
-.tech-links {
+.skill-links {
   padding-inline-end: 2em;
+}
+
+.cloud-map-link {
   padding-bottom: 2em;
+  padding-inline-end: 2em;
+}
+
+.skills-progress-bar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-progress-bar {
+  height: 0.4em;
+  border-radius: 50px;
+  background-color: var(--primary-colour);
+}
+
+.skill-name-and-progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.progress-bar-cell {
+  width: 100%;
+  margin-inline-start: 2em;
+}
+
+.skill-name-cell {
+  min-width: 8em;
+  max-width: 8em;
+  margin-inline-end: 2em;
 }

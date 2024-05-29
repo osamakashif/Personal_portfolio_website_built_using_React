@@ -29,18 +29,20 @@ export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="big-screen">
-        <ul className="nav-list">
+        <div className="logo-and-pages">
           <NavbarLogo />
-          {pages.map((page) => {
-            return (
-              <li key={page.name}>
-                <a className="nav-link" href={page.link}>
-                  {page.name}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
+          <ul className="nav-list">
+            {pages.map((page) => {
+              return (
+                <li key={page.name}>
+                  <a className="nav-link" href={page.link}>
+                    {page.name}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
         <SettingsDrawer />
       </div>
       <div className="small-screen">

@@ -16,3 +16,14 @@
 .link-icon {
   fill: var(--link-colour);
 }
+
+@media only screen and (max-width: 450px) {
+  .display-image {
+    align-self: center;
+  }
+
+  .about_me_block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

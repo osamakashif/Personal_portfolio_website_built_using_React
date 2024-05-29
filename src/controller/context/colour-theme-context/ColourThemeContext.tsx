@@ -39,17 +39,21 @@ export function ColourThemeContextProvider({ children }: { children: any }) {
   }, [theme]);
 
   useEffect(() => {
-    let link: Element | null = document.querySelector("link[rel~='icon']");
-    if (link) {
-      if (theme === "dark") {
-        (link as HTMLLinkElement).href = darkFavIcon;
-      } else if (theme === "light") {
-        (link as HTMLLinkElement).href = lightFavIcon;
-      } else {
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-          ? ((link as HTMLLinkElement).href = darkFavIcon)
-          : ((link as HTMLLinkElement).href = lightFavIcon);
-      }
+    let link: Element | HTMLLinkElement | null =
+      document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement("link");
+      (link as HTMLLinkElement).rel = "icon";
+      document.head.appendChild(link);
+    }
+    if (theme === "dark") {
+      (link as HTMLLinkElement).href = darkFavIcon;
+    } else if (theme === "light") {
+      (link as HTMLLinkElement).href = lightFavIcon;
+    } else {
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? ((link as HTMLLinkElement).href = darkFavIcon)
+        : ((link as HTMLLinkElement).href = lightFavIcon);
     }
   }, [theme]);
 

@@ -28,3 +28,9 @@
   border: solid 1px transparent;
   background-color: var(--tertiary-background-colour);
 }
+
+@media only screen and (max-width: 395px) {
+  .themes {
+    padding: 0.5em;
+  }
+}

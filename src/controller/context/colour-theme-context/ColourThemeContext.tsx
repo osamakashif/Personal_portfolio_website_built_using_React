@@ -57,6 +57,18 @@ export function ColourThemeContextProvider({ children }: { children: any }) {
     }
   }, [theme]);
 
+  useEffect(() => {
+    if (theme === "dark") {
+      document.body.style.backgroundColor = "var(--dark-colour)";
+    } else if (theme === "light") {
+      document.body.style.backgroundColor = "var(--light-colour)";
+    } else {
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? (document.body.style.backgroundColor = "var(--dark-colour)")
+        : (document.body.style.backgroundColor = "var(--light-colour)");
+    }
+  }, [theme]);
+
   const switchTheme = useCallback((newTheme: "auto" | "light" | "dark") => {
     if (newTheme === "auto" || newTheme === "light" || newTheme === "dark") {
       setTheme(newTheme);

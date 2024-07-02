@@ -1,6 +1,7 @@
 {
   "name": "osamakashif",
   "version": "1.0.5",
+  "author": {"name": "Osana Kashif", "url": "https://www.linkedin.com/in/osamakashif"},
   "private": true,
   "homepage": "https://osamakashif.dev",
   "dependencies": {

@@ -1,4 +1,8 @@
-export const SunMoonIcon = ({ className = "icon-stroke icon-background-fill icon-padding" }: { className?: string }) => {
+export const SunMoonIcon = ({
+  className = "icon-stroke icon-transparent-background-fill icon-padding",
+}: {
+  className?: string;
+}) => {
   return (
     // Original SVG Source: https://www.svgrepo.com/svg/384302/day-night-sun-moon-cycle
     // Original SVG Authour: wishforge.games.
@@ -7,13 +11,7 @@ export const SunMoonIcon = ({ className = "icon-stroke icon-background-fill icon
     // Information obtained: 24th May 2024.
     // Modifications done.
     // Classname added.
-    <svg
-      height="24px"
-      width="24px"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      className={className}
-    >
+    <svg height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className={className}>
       <path d="M16,23c-3.87,0-7-3.13-7-7s3.13-7,7-7"></path>
       <line x1="6.81" y1="6.81" x2="8.93" y2="8.93"></line>
       <line x1="3" y1="16" x2="6" y2="16"></line>

@@ -76,18 +76,17 @@ export const Skills = () => {
       />
       {!progressVisible && (
         <div className="skills-container">
-          {skills &&
-            skills.map((skill, index) => (
-              <a
-                key={index}
-                href={skill.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="skills-link cloud-map-link new-page-link"
-              >
-                {skill.name}
-              </a>
-            ))}
+          {skills?.map((skill, index) => (
+            <a
+              key={index}
+              href={skill.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="skills-link cloud-map-link new-page-link"
+            >
+              {skill.name}
+            </a>
+          ))}
         </div>
       )}
       {progressVisible && (

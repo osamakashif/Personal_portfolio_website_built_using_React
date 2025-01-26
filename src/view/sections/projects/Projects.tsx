@@ -4,12 +4,14 @@ import { Project } from "../../../model/projects/Project";
 import { getProjectsFromGitHub } from "../../../controller/services/GitHubService";
 import { GitHubIcon } from "../../assets/icons/GitHubIcon";
 import { CheckOption } from "../../components/check-option/CheckOption";
+import { NewTabIcon } from "../../assets/icons/NewTabIcon";
 
 export const Projects = () => {
   const [sortByLanguage, setSortByLanguage] = useState<boolean>(true);
   const [languages, setLanguages] = useState<string[]>([]);
   const [projects, setProjects] = useState<Project[]>([]);
   const [loaded, setLoaded] = useState<boolean>(false);
+  const openRepositoryMessage: string = "Open repository.";
 
   useEffect(() => {
     const getGitHubRepos = async () => {
@@ -31,18 +33,21 @@ export const Projects = () => {
       <div className="card-container space-justified-card">
         {projects.map((project) => {
           return (
-            <div key={project.name} className="project-card">
-              <a
-                className="new-page-link"
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {project.name}
-              </a>
-              <p>{project.mainLanguage}</p>
-              <p>{project.description}</p>
-            </div>
+            <a
+              key={project.name}
+              className="project-card"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h1 className="project-card-name">{project.name}</h1>
+              <div className="project-card-open-message">
+                <p>{openRepositoryMessage}</p>
+                <NewTabIcon />
+              </div>
+              <p className="project-card-details">{project.mainLanguage}</p>
+              <p className="project-card-details">{project.description}</p>
+            </a>
           );
         })}
       </div>
@@ -51,26 +56,19 @@ export const Projects = () => {
 
   const displayLanguageSortedProject = (project: Project): JSX.Element => {
     return (
-      <div key={project.name} className="project-card">
-        <a
-          className="new-page-link"
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {project.name}
-        </a>
-        <p>{project.description}</p>
-      </div>
+      <a key={project.name} className="project-card" href={project.link} target="_blank" rel="noopener noreferrer">
+        <h1 className="project-card-name">{project.name}</h1>
+        <div className="project-card-open-message">
+          <p>{openRepositoryMessage}</p>
+          <NewTabIcon />
+        </div>
+        <p className="project-card-details">{project.description}</p>
+      </a>
     );
   };
 
   const displayLanguageTitle = (language: string | null): JSX.Element => {
-    return (
-      <h2 className="language-title">
-        {language === null ? "Other" : language}
-      </h2>
-    );
+    return <h2 className="language-title">{language === null ? "Other" : language}</h2>;
   };
 
   const displayLanguageSortedBlocks = (): ReactElement<any, any> => {
@@ -116,8 +114,7 @@ export const Projects = () => {
       {!loaded && (
         <div>
           <p>
-            In case the projects are not visible on this page, you can see some
-            of my projects on{" "}
+            In case the projects are not visible on this page, you can see some of my projects on{" "}
             <a
               href="https://github.com/osamakashif"
               target="_blank"

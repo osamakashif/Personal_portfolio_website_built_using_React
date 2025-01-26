@@ -49,38 +49,55 @@ export const Skills = () => {
       {progressVisible && (
         <div className="skills-progress-bar-container">
           {skills && (
-            <table>
-              <tbody>
-                {skills.map((skill, index) => (
-                  <tr key={index} className="skill-name-and-progress">
-                    <td className="skill-name-cell">
-                      <a
-                        href={skill.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="skills-link new-page-link"
-                        aria-label={
-                          progressVisible
-                            ? skill.name +
-                              (skill.progress
-                                ? ". " + getProgressDescription(skill.progress)
-                                : "")
-                            : skill.name
-                        }
-                      >
-                        {skill.name}
-                      </a>
-                    </td>
-                    <td className="progress-bar-cell">
-                      <div
-                        className="skill-progress-bar"
-                        style={{ width: skill.progress + "%" }}
-                      ></div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <>
+              <div className="skills-keys-definition">
+                <div className="skill-key">
+                  <p>Used</p>
+                  <div className="circle key-colour-1"></div>
+                </div>
+                <div className="skill-key">
+                  <p>Competent</p>
+                  <div className="circle key-colour-2"></div>
+                </div>
+                <div className="skill-key">
+                  <p>Proficient</p>
+                  <div className="circle key-colour-3"></div>
+                </div>
+              </div>
+              <table>
+                <tbody>
+                  {skills.map((skill, index) => (
+                    <tr key={index} className="skill-name-and-progress">
+                      <td className="skill-name-cell">
+                        <a
+                          href={skill.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="skills-link new-page-link"
+                          aria-label={
+                            progressVisible
+                              ? skill.name +
+                                (skill.progress
+                                  ? ". " +
+                                    getProgressDescription(skill.progress)
+                                  : "")
+                              : skill.name
+                          }
+                        >
+                          {skill.name}
+                        </a>
+                      </td>
+                      <td className="progress-bar-cell">
+                        <div
+                          className="skill-progress-bar"
+                          style={{ width: skill.progress + "%" }}
+                        ></div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </>
           )}
         </div>
       )}

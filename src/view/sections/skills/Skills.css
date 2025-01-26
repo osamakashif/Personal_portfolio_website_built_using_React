@@ -40,3 +40,33 @@
   max-width: 8em;
   margin-inline-end: 2em;
 }
+
+.skills-keys-definition {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.skill-key {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  margin: 10px;
+}
+
+.key-colour-1 {
+  background-color: var(--primary-colour);
+}
+
+.key-colour-2 {
+  background-color: var(--link-colour);
+}
+
+.key-colour-3 {
+  background-color: var(--contrast-highlight-colour);
+}

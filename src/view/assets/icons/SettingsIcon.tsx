@@ -1,5 +1,5 @@
 export const SettingsIcon = ({
-  className = "icon-stroke icon-background-fill",
+  className = "icon-stroke icon-transparent-background-fill",
 }: {
   className?: string;
 }) => {

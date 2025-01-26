@@ -23,9 +23,63 @@
   flex-direction: column;
   margin: 1em;
   padding: 2em;
-  border-radius: 20px;
+  border-radius: 7.5px;
   width: 100%;
   background-color: var(--tertiary-background-colour);
+  text-decoration: none;
+  color: var(--text-colour);
+  font-size: 1em;
+  border-bottom-style: solid;
+  border-bottom-color: var(--link-colour);
+  border-bottom-width: 7.5px;
+  .project-card-name {
+    color: var(--link-colour);
+    font-size: 1.5em;
+  }
+  .project-card-details {
+    visibility: visible;
+    display: block;
+    margin-top: 0;
+  }
+
+  .project-card-open-message {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.project-card:hover {
+  background-color: var(--link-colour);
+  color: var(--background-colour);
+  .project-card-name {
+    color: var(--tertiary-background-colour);
+  }
+  .project-card-details {
+    visibility: hidden;
+  }
+
+  .project-card-open-message {
+    visibility: visible;
+  }
+}
+
+.project-card:focus {
+  background-color: var(--link-colour);
+  color: var(--background-colour);
+  .project-card-name {
+    color: var(--tertiary-background-colour);
+  }
+  .project-card-details {
+    visibility: hidden;
+  }
+
+  .project-card-open-message {
+    visibility: visible;
+  }
 }
 
 .language-card {

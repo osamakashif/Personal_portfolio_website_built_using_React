@@ -103,6 +103,10 @@ button {
 }
 
 .icon-background-fill {
+  fill: var(--background-colour);
+}
+
+.icon-transparent-background-fill {
   fill: transparent;
 }
 

@@ -118,12 +118,10 @@ export const Skills = () => {
                           rel="noopener noreferrer"
                           className="skills-link new-page-link"
                           aria-label={
-                            progressVisible
+                            skill.progress
                               ? skill.name +
-                                (skill.progress
-                                  ? ". " +
-                                    getProgressDescription(skill.progress)
-                                  : "")
+                                ". " +
+                                getProgressDescription(skill.progress)
                               : skill.name
                           }
                         >

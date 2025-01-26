@@ -21,6 +21,50 @@ export const Skills = () => {
     return "Proficient: Years of experience.";
   };
 
+  const progressBar = (progress: number | undefined) => {
+    if (!progress) {
+      return <></>;
+    }
+    if (progress <= 100 / 3) {
+      return (
+        <div
+          className="progress-bar-height used-bar full-progress-bar-border-rounding"
+          style={{ width: progress + "%" }}
+        ></div>
+      );
+    }
+    if (progress <= 200 / 3) {
+      return (
+        <div className="multi-progress-bar-container">
+          <div
+            className="progress-bar-height used-bar left-progress-bar-border-rounding"
+            style={{ width: 100 / 3 + "%" }}
+          ></div>
+          <div
+            className="progress-bar-height competent-bar right-progress-bar-border-rounding"
+            style={{ width: progress - 100 / 3 + "%" }}
+          ></div>
+        </div>
+      );
+    }
+    return (
+      <div className="multi-progress-bar-container">
+        <div
+          className="progress-bar-height used-bar left-progress-bar-border-rounding"
+          style={{ width: 100 / 3 + "%" }}
+        ></div>
+        <div
+          className="progress-bar-height competent-bar"
+          style={{ width: 100 / 3 + "%" }}
+        ></div>
+        <div
+          className="progress-bar-height proficient-bar right-progress-bar-border-rounding"
+          style={{ width: progress - 200 / 3 + "%" }}
+        ></div>
+      </div>
+    );
+  };
+
   return (
     <div id="skills" className="section-content">
       <h1>Technological Experience & Skills</h1>
@@ -88,10 +132,7 @@ export const Skills = () => {
                         </a>
                       </td>
                       <td className="progress-bar-cell">
-                        <div
-                          className="skill-progress-bar"
-                          style={{ width: skill.progress + "%" }}
-                        ></div>
+                        {progressBar(skill.progress)}
                       </td>
                     </tr>
                   ))}

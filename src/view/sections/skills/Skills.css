@@ -18,10 +18,54 @@
   flex-direction: column;
 }
 
-.skill-progress-bar {
+.multi-progress-bar-container {
+  display: flex;
+  align-items: center;
   height: 0.4em;
+}
+
+.progress-bar-height {
+  height: 0.4em;
+}
+
+.full-progress-bar-border-rounding {
   border-radius: 50px;
+}
+
+.left-progress-bar-border-rounding {
+  border-radius: 50px 0px 0px 50px;
+}
+
+.right-progress-bar-border-rounding {
+  border-radius: 0px 50px 50px 0px;
+}
+
+.used-bar {
   background-color: var(--primary-colour);
+}
+
+.competent-bar {
+  background: linear-gradient(
+      to right,
+      var(--primary-colour),
+      var(--primary-colour) 0%,
+      var(--link-colour) 10%,
+      var(--link-colour) 100%,
+      var(--link-colour)
+    )
+    0/33vw;
+}
+
+.proficient-bar {
+  background: linear-gradient(
+      to right,
+      var(--link-colour),
+      var(--link-colour) 0%,
+      var(--contrast-highlight-colour) 10%,
+      var(--contrast-highlight-colour) 100%,
+      var(--contrast-highlight-colour)
+    )
+    0/33vw;
 }
 
 .skill-name-and-progress {

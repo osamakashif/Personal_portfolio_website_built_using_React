@@ -23,7 +23,7 @@
   flex-direction: column;
   margin: 1em;
   padding: 2em;
-  border-radius: 10px;
+  border-radius: 7.5px;
   width: 100%;
   background-color: var(--tertiary-background-colour);
   text-decoration: none;
@@ -31,7 +31,7 @@
   font-size: 1em;
   border-bottom-style: solid;
   border-bottom-color: var(--link-colour);
-  border-bottom-width: 10px;
+  border-bottom-width: 7.5px;
   .project-card-name {
     color: var(--link-colour);
     font-size: 1.5em;

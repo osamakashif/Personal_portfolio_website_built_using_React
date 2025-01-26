@@ -78,7 +78,7 @@ export const Skills = () => {
         <div className="skills-container">
           {skills?.map((skill, index) => (
             <a
-              key={index}
+              key={index + skill.name}
               href={skill.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -110,7 +110,10 @@ export const Skills = () => {
               <table>
                 <tbody>
                   {skills.map((skill, index) => (
-                    <tr key={index} className="skill-name-and-progress">
+                    <tr
+                      key={index + skill.name}
+                      className="skill-name-and-progress"
+                    >
                       <td className="skill-name-cell">
                         <a
                           href={skill.link}

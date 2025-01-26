@@ -67,6 +67,21 @@
   }
 }
 
+.project-card:focus {
+  background-color: var(--link-colour);
+  color: var(--background-colour);
+  .project-card-name {
+    color: var(--tertiary-background-colour);
+  }
+  .project-card-details {
+    visibility: hidden;
+  }
+
+  .project-card-open-message {
+    visibility: visible;
+  }
+}
+
 .language-card {
   margin: 1em;
   padding: 1em;
